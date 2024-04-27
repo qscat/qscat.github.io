@@ -1,0 +1,1297 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Sample Workflow &#8212; QSCAT v0.3.1 Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/qscat.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'manual/others/sample_workflow';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Summary Report" href="summary_report.html" />
+    <link rel="prev" title="Tab: About" href="../tabs/about.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2024 Apr 28, 03:23 +0800"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/qscat-logo.svg" class="logo__image only-light" alt="QSCAT v0.3.1 Documentation - Home"/>
+    <script>document.write(`<img src="../../_static/qscat-logo-dark.svg" class="logo__image only-dark" alt="QSCAT v0.3.1 Documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/qscat/qscat">
+                    GitHub
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/QSCATplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/QSCATplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://github.com/qscat/qscat">
+                    GitHub
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/QSCATplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/QSCATplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/system_requirements.html">System Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/installation_steps.html">Installation Steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugin/required_inputs.html">Required Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/project_settings.html">Tab: Project Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/automator.html">Tab: Automator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/baseline.html">Tab: Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/shorelines.html">Tab: Shorelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/transects.html">Tab: Transects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/shoreline_change.html">Tab: Shoreline Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/area_change.html">Tab: Area Change (Beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/forecasting.html">Tab: Forecasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/visualization.html">Tab: Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/summary_reports.html">Tab: Summary Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tabs/about.html">Tab: About</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sample Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary_report.html">Summary Report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help_and_support.html">Help and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributors.html">Contributors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="appendices/index.html">Appendices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendices/example_summary_report.html">Appendix 1: Example Summmary Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Manual</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Sample Workflow</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="sample-workflow">
+<span id="others-sample-workflow"></span><h1>Sample Workflow<a class="headerlink" href="#sample-workflow" title="Permalink to this heading">#</a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#preparing-the-shoreline-vectors" id="id46">Preparing the shoreline vectors</a></p></li>
+<li><p><a class="reference internal" href="#generating-the-baseline-vectors" id="id47">Generating the baseline vectors</a></p>
+<ul>
+<li><p><a class="reference internal" href="#merging-the-shoreline-vectors" id="id48">Merging the shoreline vectors</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-buffer-using-qscat" id="id49">Creating a buffer using QSCAT</a></p></li>
+<li><p><a class="reference internal" href="#converting-the-buffer-to-baseline-vector" id="id50">Converting the buffer to baseline vector</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#configuring-the-shoreline-and-baseline-layer-attributes" id="id51">Configuring the shoreline and baseline layer attributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#shorelines" id="id52">Shorelines</a></p></li>
+<li><p><a class="reference internal" href="#baseline" id="id53">Baseline</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#configuring-the-selections-of-layer-and-fields" id="id54">Configuring the selections of layer and fields</a></p></li>
+<li><p><a class="reference internal" href="#casting-of-transects" id="id55">Casting of transects</a></p></li>
+<li><p><a class="reference internal" href="#computing-the-shoreline-change" id="id56">Computing the shoreline change</a></p></li>
+<li><p><a class="reference internal" href="#running-optional-features" id="id57">Running optional features</a></p>
+<ul>
+<li><p><a class="reference internal" href="#computing-the-area-change" id="id58">Computing the area change</a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-the-polygon-using-qgis" id="id59">Creating the polygon using QGIS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#running-the-forecasting" id="id60">Running the forecasting</a></p></li>
+<li><p><a class="reference internal" href="#visualizing-the-statistics-transects" id="id61">Visualizing the statistics transects</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>This section provides a step-by-step guide on how to run a shoreline change analysis using QSCAT with sample data from Agoo, La Union shorelines. The sample data includes shoreline vectors from 1977, 1988, 2010, and 2022. The process includes generating the baseline vectors, merging the shoreline vectors, and running the shoreline change analysis.</p>
+<p>According to the <a class="reference internal" href="../plugin/required_inputs.html#plugin-required-inputs"><span class="std std-ref">Required Inputs</span></a> section, the QSCAT requires the two following layers:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Shoreline layer</p></li>
+<li><p>Baseline layer</p></li>
+</ol>
+</div></blockquote>
+<section id="preparing-the-shoreline-vectors">
+<h2><a class="toc-backref" href="#id46" role="doc-backlink">Preparing the shoreline vectors</a><a class="headerlink" href="#preparing-the-shoreline-vectors" title="Permalink to this heading">#</a></h2>
+<p>The tracing of shoreline vectors are out of scope in this guide. However, the shoreline vectors are already provided in the sample data. The shoreline vectors are saved as separate shapefile layers for each year. The shoreline vectors are saved as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><cite>Agoo 1977</cite> - shoreline vectors from 1977</p></li>
+<li><p><cite>Agoo 1988</cite> - shoreline vectors from 1988</p></li>
+<li><p><cite>Agoo 2010</cite> - shoreline vectors from 2010</p></li>
+<li><p><cite>Agoo 2022</cite> - shoreline vectors from 2022</p></li>
+</ol>
+</div></blockquote>
+<p>You can download the sample data from the following link: &lt;insert link&gt;</p>
+</section>
+<section id="generating-the-baseline-vectors">
+<h2><a class="toc-backref" href="#id47" role="doc-backlink">Generating the baseline vectors</a><a class="headerlink" href="#generating-the-baseline-vectors" title="Permalink to this heading">#</a></h2>
+<p>One of the required inputs for the QSCAT is the baseline vectors. Baseline vectors can be created using the following different strategies:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Creating a buffer of merged shorelines layer.</p></li>
+<li><p>Creating a buffer of a single shoreline layer.</p></li>
+<li><p>Manually drawing lines using <span class="guilabel">Add Line Feature</span>.</p></li>
+</ol>
+</div></blockquote>
+<p>In this guide, we will choose the first strategy, which is creating a buffer of the merged shorelines layer. Then, we will choose the part of the buffer that best represents the baseline.</p>
+<section id="merging-the-shoreline-vectors">
+<h3><a class="toc-backref" href="#id48" role="doc-backlink">Merging the shoreline vectors</a><a class="headerlink" href="#merging-the-shoreline-vectors" title="Permalink to this heading">#</a></h3>
+<p>Merging the shoreline step is optional. We only apply this if our digitized shorelines are saved as <strong>separate</strong> shapefile layers. However, in this guide, the Agoo, La Union shorelines are shared as separate shapefile layers. Thus, we will demonstrate here on how to merge these layers.</p>
+<p>However, regardless on what strategy you choose for generating the baseline vectors, the QSCAT requires the shoreline layers to be merged into a single layer. Also, if you choose the first strategy, you should first merge the shoreline layers so that we can create a buffer of all shorelines.</p>
+<ol class="arabic">
+<li><p>Open <a class="reference internal" href="../../_images/toolbox.png"><img alt="toolbox" src="../../_images/toolbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Processing Toolbox</span> via <span class="menuselection">Processing ‣ Toolbox</span>.</p>
+<figure class="align-center">
+<img alt="../../_images/opening-processing-toolbox.png" src="../../_images/opening-processing-toolbox.png" />
+</figure>
+<p><br /></p>
+</li>
+<li><p>Search <a class="reference internal" href="../../_images/search.png"><img alt="search" src="../../_images/search.png" style="width: 1.0em;" /></a> <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">vector</span> <span class="pre">layers</span></code> in the search bar. Then double left-click on <a class="reference internal" href="../../_images/merge-vector-layers.png"><img alt="mergeVectorLayers" src="../../_images/merge-vector-layers.png" style="width: 1.0em;" /></a> <code class="docutils literal notranslate"><span class="pre">Merge</span> <span class="pre">vector</span> <span class="pre">layers</span></code> to open the tool.</p>
+<figure class="align-center">
+<img alt="../../_images/searching-merge-vector-layers.png" src="../../_images/searching-merge-vector-layers.png" />
+</figure>
+<p><br /></p>
+</li>
+<li><p>In <span class="guilabel">Input layers</span>, click <span class="guilabel">…</span> then select the all shoreline layers to be merged. In this example, select <cite>Agoo 1977, Agoo 1988, Agoo 2010, and Agoo 2022</cite>. After you are done selecting, click <span class="guilabel">OK</span>.</p>
+<figure class="align-center">
+<img alt="../../_images/selecting-input-layers.png" src="../../_images/selecting-input-layers.png" />
+</figure>
+<p><br /></p>
+</li>
+<li><p>In <span class="guilabel">Destination CRS</span>, select the appropriate <code class="docutils literal notranslate"><span class="pre">CRS</span></code> of the shoreline layers for your project. In this example, select <code class="docutils literal notranslate"><span class="pre">EPSG:32651</span></code>.</p>
+<figure class="align-center">
+<img alt="../../_images/choosing-destination-crs.png" src="../../_images/choosing-destination-crs.png" />
+</figure>
+<p><br /></p>
+</li>
+<li><p>In <span class="guilabel">Merged</span>, it is recommended to permanently save the merged layers. Thus, click <span class="guilabel">…</span>, and <span class="guilabel">Save to file</span>. Choose a folder (recommended in the same folder of your <code class="docutils literal notranslate"><span class="pre">QGIS</span></code> project), pick a file name such as <code class="docutils literal notranslate"><span class="pre">Shorelines</span> <span class="pre">Merged</span></code> and choose <code class="docutils literal notranslate"><span class="pre">SHP</span> <span class="pre">files</span> <span class="pre">(*.shp)</span></code> as the file type, and click <span class="guilabel">Save</span>. Click <span class="guilabel">Run</span> to start the merge process, then you can <span class="guilabel">Close</span>.</p>
+<figure class="align-center">
+<img alt="../../_images/opening-save-merge-layers.png" src="../../_images/opening-save-merge-layers.png" />
+</figure>
+<p><br /></p>
+<figure class="align-center">
+<img alt="../../_images/saving-merged-vector-layer.png" src="../../_images/saving-merged-vector-layer.png" />
+</figure>
+<p><br /></p>
+<figure class="align-center">
+<img alt="../../_images/running-merge-vector-layers.png" src="../../_images/running-merge-vector-layers.png" />
+</figure>
+<p><br /></p>
+<figure class="align-center">
+<img alt="../../_images/closing-merge-vector-layers.png" src="../../_images/closing-merge-vector-layers.png" />
+</figure>
+<p><br /></p>
+</li>
+<li><p>Once finished, the newly merged layer with your chosen file name will appear in the <code class="docutils literal notranslate"><span class="pre">Layers</span></code> panel.</p>
+<figure class="align-center">
+<img alt="../../_images/showing-saved-merge-vector-layer.png" src="../../_images/showing-saved-merge-vector-layer.png" />
+</figure>
+<p><br /></p>
+</li>
+</ol>
+</section>
+<section id="creating-a-buffer-using-qscat">
+<h3><a class="toc-backref" href="#id49" role="doc-backlink">Creating a buffer using QSCAT</a><a class="headerlink" href="#creating-a-buffer-using-qscat" title="Permalink to this heading">#</a></h3>
+<p>Here, we can start using the QSCAT plugin. The QSCAT plugin has a feature that automates the creation of the <a class="reference internal" href="../tabs/automator.html#tab-automator-baseline-buffer"><span class="std std-ref">Baseline Buffer</span></a>.</p>
+<ol class="arabic">
+<li><p>Open QSCAT if not yet opened. The QSCAT plugin can be open by clicking the <a class="reference internal" href="../../_images/qscat.png"><img alt="qscat" src="../../_images/qscat.png" style="width: 1.3em;" /></a> icon at the top toolbar area near the <a class="reference internal" href="../../_images/python.png"><img alt="python" src="../../_images/python.png" style="width: 1.3em;" /></a> <span class="guilabel">Python Console</span> icon.</p></li>
+<li><p>In the QSCAT interface, navigate to <span class="guilabel">Automator Tab</span>. Then, in the <span class="guilabel">Baseline Buffer</span> section, select the merged shoreline layer from <span class="guilabel">Input shorelines layer</span>. Next, enter <code class="docutils literal notranslate"><span class="pre">400</span></code> in the <span class="guilabel">Distance (m)</span>, click <span class="guilabel">Buffer</span>. The buffer will be created and displayed in the map canvas. The buffer will be saved as a temporary layer.</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/creating-baseline-buffer.png" src="../../_images/creating-baseline-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 37 </span><span class="caption-text">Creating baseline buffer in Automator Tab</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<img alt="../../_images/created-buffer-on-merged-shoreline.png" src="../../_images/created-buffer-on-merged-shoreline.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 38 </span><span class="caption-text">Created buffer on merged shoreline with 400 meters distance</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="converting-the-buffer-to-baseline-vector">
+<h3><a class="toc-backref" href="#id50" role="doc-backlink">Converting the buffer to baseline vector</a><a class="headerlink" href="#converting-the-buffer-to-baseline-vector" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>First, enable the <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Advanced Digitizing Toolbar</span> (if not yet enabled) by going to <span class="menuselection">View ‣ Toolbars ‣ Advanced Digitizing Toolbar</span>.</p>
+<figure class="align-center" id="id3">
+<img alt="../../_images/enabling-advanced-digitizing-toolbar.png" src="../../_images/enabling-advanced-digitizing-toolbar.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 39 </span><span class="caption-text">Enabling Advanced Digitizing Toolbar</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../../_images/advanced-digitizing-toolbar.png" src="../../_images/advanced-digitizing-toolbar.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 40 </span><span class="caption-text">Advanced Digitizing Toolbar</span><a class="headerlink" href="#id4" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Right click on the baseline buffer layer and select <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span>. The baseline buffer layer will be editable if there is a <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> icon on the layer.</p>
+<figure class="align-center" id="id5">
+<img alt="../../_images/toggling-editing.png" class="img-border" src="../../_images/toggling-editing.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 41 </span><span class="caption-text">Toggling Editing</span><a class="headerlink" href="#id5" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>In the <span class="guilabel">Advanced Digitizing Toolbar</span>, <a class="reference internal" href="../../_images/action-split-features.png"><img alt="splitFeatures" src="../../_images/action-split-features.png" style="width: 1.5em;" /></a> click <span class="guilabel">Split Features</span>.</p>
+<figure class="align-center" id="id6">
+<img alt="../../_images/clicking-split-features.png" src="../../_images/clicking-split-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 42 </span><span class="caption-text">Clicking Split Features</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Use the <a class="reference internal" href="../../_images/action-split-features.png"><img alt="splitFeatures" src="../../_images/action-split-features.png" style="width: 1.5em;" /></a> <span class="guilabel">Split Features</span> tool to draw two lines that intersects the baseline buffer. First, <a class="reference internal" href="../../_images/cursor-point.png"><img alt="cursorPoint" src="../../_images/cursor-point.png" style="width: 1.3em;" /></a> draw the first line where you want the first split. Then, <a class="reference internal" href="../../_images/cursor-point.png"><img alt="cursorPoint" src="../../_images/cursor-point.png" style="width: 1.3em;" /></a> draw the second line where you want the second split. If drawn properly, the baseline buffer will be split into parts.</p>
+<figure class="align-center" id="id7">
+<img alt="../../_images/splitting-features.png" src="../../_images/splitting-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">Splitting features using Split Features</span><a class="headerlink" href="#id7" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Next, select <a class="reference internal" href="../../_images/action-select-features.png"><img alt="selectFeatures" src="../../_images/action-select-features.png" style="width: 1.5em;" /></a> <span class="guilabel">Select Features</span> tool and <a class="reference internal" href="../../_images/select.png"><img alt="select" src="../../_images/select.png" style="width: 1.3em;" /></a> select the baseline buffer segments that you want to remove. Selected segment will be highlighted in yellow line and red points (X). Hit <kbd class="kbd docutils literal notranslate">Delete</kbd> on your keyboard to remove the selected segment. Remove all segments that you do not want until only the baseline segment you want remains.</p>
+<figure class="align-center" id="id8">
+<img alt="../../_images/clicking-select-features.png" src="../../_images/clicking-select-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 44 </span><span class="caption-text">Clicking Select Features</span><a class="headerlink" href="#id8" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
+<img alt="../../_images/selecting-deleting-features.png" src="../../_images/selecting-deleting-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 45 </span><span class="caption-text">Selecting and deleting a feature</span><a class="headerlink" href="#id9" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Finally, right click on the baseline buffer layer and select <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span> and it will prompt to save the changes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There will be a case when the baseline buffer are split unexpectedly. As you can see in <a class="reference internal" href="#figure-unexpected-split"><span class="std std-numref">Fig. 46</span></a>, you can verify that there are two resulting segments even though we did not draw a line there.</p>
+</div>
+<figure class="align-center" id="id10">
+<span id="figure-unexpected-split"></span><img alt="../../_images/unexpected-split.png" src="../../_images/unexpected-split.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 46 </span><span class="caption-text">Unexpected split of baseline buffer</span><a class="headerlink" href="#id10" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<p>To fix this, go back to the editing mode (<a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span>). Select the two segments by clicking <a class="reference internal" href="../../_images/select.png"><img alt="select" src="../../_images/select.png" style="width: 1.3em;" /></a> left click on each segment while holding <kbd class="kbd docutils literal notranslate">Shift</kbd> key. Then, in <span class="guilabel">Advanced Digitizing Toolbar</span>, click <a class="reference internal" href="../../_images/action-merge-features.png"><img alt="mergeFeatures" src="../../_images/action-merge-features.png" style="width: 1.5em;" /></a> <span class="guilabel">Merge Selected Features</span>, and click <span class="guilabel">OK</span>. The two segments will be merged into one, you can verify by selecting the features. You can <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span> again to save.</p>
+<figure class="align-center" id="id11">
+<img alt="../../_images/clicking-merge-features.png" src="../../_images/clicking-merge-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 47 </span><span class="caption-text">Clicking Merge Selected Features</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../../_images/merging-features.png" src="../../_images/merging-features.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 48 </span><span class="caption-text">Merging Selected Features</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>If you are okay with the final baseline, you can now permanently save it as a file, right click on the layer and select <span class="guilabel">Export –&gt; Save Features As…</span>. Choose a folder (recommended in the same folder of your QGIS project), pick a file name such as <code class="docutils literal notranslate"><span class="pre">Baseline</span></code>, and choose <code class="docutils literal notranslate"><span class="pre">ESRI</span> <span class="pre">Shapefile</span> <span class="pre">(*.shp</span> <span class="pre">*.SHP)</span></code> as the file type, and click <span class="guilabel">Save</span>. Choose appropriate <code class="docutils literal notranslate"><span class="pre">CRS</span></code> for your project and click <span class="guilabel">OK</span>.</p>
+<figure class="align-center" id="id13">
+<img alt="../../_images/opening-saving-feature.png" src="../../_images/opening-saving-feature.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 49 </span><span class="caption-text">Accessing Save Feature As…</span><a class="headerlink" href="#id13" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<img alt="../../_images/saving-vector-layer-as.png" src="../../_images/saving-vector-layer-as.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 50 </span><span class="caption-text">Saving Vector Layer As…</span><a class="headerlink" href="#id14" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<img alt="../../_images/saving-layer-as.png" src="../../_images/saving-layer-as.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 51 </span><span class="caption-text">Saving Layer As…</span><a class="headerlink" href="#id15" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
+<img alt="../../_images/saving-vector-layer-as-final.png" src="../../_images/saving-vector-layer-as-final.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 52 </span><span class="caption-text">Finalizing Saving Vector Layer As…</span><a class="headerlink" href="#id16" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+<section id="configuring-the-shoreline-and-baseline-layer-attributes">
+<h2><a class="toc-backref" href="#id51" role="doc-backlink">Configuring the shoreline and baseline layer attributes</a><a class="headerlink" href="#configuring-the-shoreline-and-baseline-layer-attributes" title="Permalink to this heading">#</a></h2>
+<section id="shorelines">
+<h3><a class="toc-backref" href="#id52" role="doc-backlink">Shorelines</a><a class="headerlink" href="#shorelines" title="Permalink to this heading">#</a></h3>
+<p>Next, we need to add details of each shoreline such as its date and its uncertainty value of the images. We can use <span class="guilabel">Shoreline Fields Automator</span> to add the required fields for these.</p>
+<ol class="arabic">
+<li><p>Navigate to <span class="guilabel">Automator Tab</span>. Then, in the <span class="guilabel">Fields - Shoreline</span>, select the merged shoreline layer from <span class="guilabel">Shoreline layer</span>. Make sure <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a><span class="guilabel">Date field name</span> and <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Uncertainty field name</span> is both checked. Type the appropriate date field name and uncertainty field name or leave as is. In this example, we choose <code class="docutils literal notranslate"><span class="pre">qs_date</span></code> and <code class="docutils literal notranslate"><span class="pre">qs_unc</span></code> as the field names. Click <span class="guilabel">Add Fields</span>.</p>
+<figure class="align-center" id="id17">
+<img alt="../../_images/automating-shoreline-fields.png" src="../../_images/automating-shoreline-fields.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 53 </span><span class="caption-text">Automating adding of shoreline fields using Shoreline Fields Automator</span><a class="headerlink" href="#id17" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Then, we need to fill in the details of each shoreline. Right click on the merged shoreline layer and select <a class="reference internal" href="../../_images/action-open-table.png"><img alt="openTable" src="../../_images/action-open-table.png" style="width: 1.5em;" /></a> <span class="guilabel">Open Attribute Table</span>. But first, enable the <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span> if not yet enabled. In the attribute table, fill in the details of each shoreline such as its date and its uncertainty value. In our sample data, input the following details:</p>
+<table class="table table-center" id="id18">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Shoreline date and uncertainty of Agoo, La Union shorelines</span><a class="headerlink" href="#id18" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Shoreline</p></th>
+<th class="head"><p>Date</p></th>
+<th class="head"><p>Uncertainty</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Agoo 1977</p></td>
+<td><p>01/1977</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-odd"><td><p>Agoo 1988</p></td>
+<td><p>03/1988</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-even"><td><p>Agoo 2010</p></td>
+<td><p>05/2010</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Agoo 2022</p></td>
+<td><p>04/2022</p></td>
+<td><p>15</p></td>
+</tr>
+</tbody>
+</table>
+<p>According to <a class="reference internal" href="../tabs/automator.html#tab-automator-shoreline-fields"><span class="std std-ref">Shoreline Fields</span></a>, date is in the format of <code class="docutils literal notranslate"><span class="pre">MM/YYYY</span></code> and uncertainty is in meters. Also, make sure that details aligns based on the shoreline layer.</p>
+<figure class="align-center" id="id19">
+<img alt="../../_images/opening-attribute-table.png" class="img-border" src="../../_images/opening-attribute-table.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 54 </span><span class="caption-text">Opening attribute table of shoreline layer.</span><a class="headerlink" href="#id19" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id20">
+<img alt="../../_images/editing-attribute-table.png" src="../../_images/editing-attribute-table.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 55 </span><span class="caption-text">Editing attribute table of shoreline layer.</span><a class="headerlink" href="#id20" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id21">
+<img alt="../../_images/saving-attribute-table.png" src="../../_images/saving-attribute-table.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 56 </span><span class="caption-text">Saving attribute table of shoreline layer.</span><a class="headerlink" href="#id21" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="baseline">
+<h3><a class="toc-backref" href="#id53" role="doc-backlink">Baseline</a><a class="headerlink" href="#baseline" title="Permalink to this heading">#</a></h3>
+<p>Baseline also optionally includes fields such as placement, transect length, and orientation. However for this sample data, we will not add any fields because it is only applicable for multi baseline. For more information, refer to <a class="reference internal" href="../tabs/automator.html#tab-automator-baseline-fields"><span class="std std-ref">Baseline Fields</span></a>.</p>
+</section>
+</section>
+<section id="configuring-the-selections-of-layer-and-fields">
+<h2><a class="toc-backref" href="#id54" role="doc-backlink">Configuring the selections of layer and fields</a><a class="headerlink" href="#configuring-the-selections-of-layer-and-fields" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>For shorelines, go to <span class="guilabel">Shorelines Tab</span>.</p>
+<p>In <span class="guilabel">Layer</span> section, select the merged shoreline layer as the <span class="guilabel">Input layer</span>. Leave <span class="guilabel">Default data uncertainty</span> as is; this value is used when no uncertainty value is provided in a shoreline uncertainty field (<a class="reference internal" href="../tabs/shorelines.html#shorelines-parameters"><span class="std std-ref">Layer</span></a>).</p>
+<p>In <span class="guilabel">Fields</span> section, select the added date (<span class="guilabel">Year</span>) and uncertainty (<span class="guilabel">Uncertainty</span>) field names, and click <span class="guilabel">Save</span>.</p>
+<figure class="align-center" id="id22">
+<img alt="../../_images/configuring-shorelines.png" src="../../_images/configuring-shorelines.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 57 </span><span class="caption-text">Configuring shorelines in Shorelines Tab</span><a class="headerlink" href="#id22" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>For baseline, go to <span class="guilabel">Baseline Tab</span>.</p>
+<p>In <span class="guilabel">Layer</span> section, select the baseline layer as the <span class="guilabel">Input layer</span>.</p>
+<p>In <span class="guilabel">Placement</span> section, select <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">Sea or offshore</span> (see <a class="reference internal" href="../tabs/baseline.html#tab-baseline-placement"><span class="std std-ref">Placement</span></a>).</p>
+<p>In <span class="guilabel">Orientation</span> section, select <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">Land is to the RIGHT (R)</span> (see <a class="reference internal" href="../tabs/baseline.html#tab-baseline-orientation"><span class="std std-ref">Orientation</span></a>), and click <span class="guilabel">Save</span>.</p>
+<figure class="align-center" id="id23">
+<img alt="../../_images/configuring-baseline.png" src="../../_images/configuring-baseline.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 58 </span><span class="caption-text">Configuring baseline in Baseline Tab</span><a class="headerlink" href="#id23" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="casting-of-transects">
+<h2><a class="toc-backref" href="#id55" role="doc-backlink">Casting of transects</a><a class="headerlink" href="#casting-of-transects" title="Permalink to this heading">#</a></h2>
+<p>We can now start the process of running shoreline change analysis. The first step is to cast transects. The transects are lines that are perpendicular to the baseline. The transects are used to measure the shoreline change statistics.</p>
+<ol class="arabic">
+<li><p>Go to <span class="guilabel">Transects Tab</span>.</p>
+<p>In <span class="guilabel">Layer</span> section, select a name for the transect layer in <span class="guilabel">Layer output name</span>. In this example, we leave <code class="docutils literal notranslate"><span class="pre">transects</span></code> as is (see <a class="reference internal" href="../tabs/transects.html#tab-transects-vector-layer-output-name"><span class="std std-ref">Vector layer output</span></a> how is the output name used).</p>
+<p>In <span class="guilabel">Count</span> section, select how would you want the number of transects to be determined. In this example, we choose <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">By transect spacing</span> and leave <code class="docutils literal notranslate"><span class="pre">50</span></code> meters as is` (see <a class="reference internal" href="../tabs/transects.html#tab-transects-count"><span class="std std-ref">Count</span></a>).</p>
+<p>In <span class="guilabel">Parameters</span> section, leave <span class="guilabel">Transect length</span> and <span class="guilabel">Smoothing distance</span> as is (see <a class="reference internal" href="../tabs/transects.html#tab-transects-parameters"><span class="std std-ref">Parameters</span></a>).</p>
+<p>Click <span class="guilabel">Cast Transect</span> to start the process of casting transects. The transects will be created and displayed in the map canvas. The transects will be saved as a temporary layer. You can optionally <span class="guilabel">Save</span> the selections such that it will be retain when you close QSCAT or QGIS.</p>
+<figure class="align-center" id="id24">
+<img alt="../../_images/casting-transects.png" src="../../_images/casting-transects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 59 </span><span class="caption-text">Casting transects using Transect Tab.</span><a class="headerlink" href="#id24" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id25">
+<img alt="../../_images/transects.png" class="img-border" src="../../_images/transects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 60 </span><span class="caption-text">Transects with 2000 meters length, and 500 meters smoothing distance together with baseline (baseline orientation shown) and shorelines.</span><a class="headerlink" href="#id25" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id26">
+<img alt="../../_images/layer-with-transects.png" class="img-border" src="../../_images/layer-with-transects.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 61 </span><span class="caption-text">Current layers with transects.</span><a class="headerlink" href="#id26" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="computing-the-shoreline-change">
+<h2><a class="toc-backref" href="#id56" role="doc-backlink">Computing the shoreline change</a><a class="headerlink" href="#computing-the-shoreline-change" title="Permalink to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Go to <span class="guilabel">Shoreline Change Tab</span>.</p>
+<p>In <span class="guilabel">General</span> section, select the created transect layer (note that after every cast the transects layer will be automatically selected here). You can optionally <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Clip transects</span> if you want, this is only for visualization purposes and does not affect statistics. Choose where you want the summary reports to be saved in <span class="guilabel">Summary reports location</span> (see <a class="reference internal" href="summary_report.html#summary-report"><span class="std std-ref">Summary Report</span></a>).</p>
+<p>In <span class="guilabel">Transect-Shoreline Intersections</span>, leave <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">Distance</span> and <span class="guilabel">Farthest</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-tsi"><span class="std std-ref">Transect-Shoreline Intersections</span></a>).</p>
+<p>In <span class="guilabel">Shoreline Change Statistics</span>, select statistics you want to calculate, select all via <span class="guilabel">Select / Deselect All</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-scs"><span class="std std-ref">Shoreline Change Statistics</span></a>).</p>
+<p>In <span class="guilabel">Pairwise Comparison Shorelines</span>, always click <span class="guilabel">Update</span> when selections are empty in <span class="guilabel">Newest date</span> and <span class="guilabel">Oldest date</span>. The <span class="guilabel">Update</span> button is also used when you changed the values of date field in shorelines layer then you want to update the selection of dates. Make sure to select <code class="docutils literal notranslate"><span class="pre">04/2022</span></code> in <span class="guilabel">Newest date</span> and <code class="docutils literal notranslate"><span class="pre">01/1977</span></code> in <span class="guilabel">Oldest date</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-pcs"><span class="std std-ref">Pairwise Comparison of Shorelines</span></a>).</p>
+<p>In <span class="guilabel">Additional Parameters</span>, leave <span class="guilabel">Confidence interval (%)</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-additional-parameters"><span class="std std-ref">Additional Parameters</span></a>).</p>
+<p>Click <span class="guilabel">Compute Shoreline Change</span> to start the process of computing shoreline change. The shoreline change statistics will be calculated and the transects will be displayed in the map canvas. The statistics will be saved as a temporary layer. You can optionally <span class="guilabel">Save</span> the selections such that it will be retain when you close QSCAT or QGIS (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-vector-layer-output-name"><span class="std std-ref">Vector layer output</span></a>) for layer outputs.</p>
+<figure class="align-center" id="id27">
+<img alt="../../_images/computing-shoreline-change.png" class="img-border" src="../../_images/computing-shoreline-change.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 62 </span><span class="caption-text">Current layers with shoreline change statistics.</span><a class="headerlink" href="#id27" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id28">
+<img alt="../../_images/statistics.png" class="img-border" src="../../_images/statistics.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 63 </span><span class="caption-text">Current layers with shoreline change statistics.</span><a class="headerlink" href="#id28" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id29">
+<img alt="../../_images/nsm.png" class="img-border" src="../../_images/nsm.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 64 </span><span class="caption-text">Example NSM statistic transect layer when clip transect intersections applied.</span><a class="headerlink" href="#id29" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id30">
+<img alt="../../_images/nsm-table.png" class="img-border" src="../../_images/nsm-table.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 65 </span><span class="caption-text">Example NSM statistic table field and values.</span><a class="headerlink" href="#id30" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="running-optional-features">
+<h2><a class="toc-backref" href="#id57" role="doc-backlink">Running optional features</a><a class="headerlink" href="#running-optional-features" title="Permalink to this heading">#</a></h2>
+<section id="computing-the-area-change">
+<h3><a class="toc-backref" href="#id58" role="doc-backlink">Computing the area change</a><a class="headerlink" href="#computing-the-area-change" title="Permalink to this heading">#</a></h3>
+<p>This feature requires a polygon area to encompass which would you like to get the area change. Usually, we designed this for a specific area of interest like municipality or barangay boundaries. If you want to get the area change on whole area at once then you can draw a polygon that encompasses the whole area. For this sample data, we will get the area change on the whole area.</p>
+<section id="creating-the-polygon-using-qgis">
+<h4><a class="toc-backref" href="#id59" role="doc-backlink">Creating the polygon using QGIS</a><a class="headerlink" href="#creating-the-polygon-using-qgis" title="Permalink to this heading">#</a></h4>
+<ol class="arabic">
+<li><p>In the top part of QGIS, click <a class="reference internal" href="../../_images/action-new-vector-layer.png"><img alt="newVectorLayer" src="../../_images/action-new-vector-layer.png" style="width: 1.5em;" /></a> <span class="guilabel">New Shapefile Layer</span>.</p>
+<figure class="align-center" id="id31">
+<img alt="../../_images/opening-new-shapefile-layer.png" class="img-border" src="../../_images/opening-new-shapefile-layer.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 66 </span><span class="caption-text">Opening New Shapefile Layer.</span><a class="headerlink" href="#id31" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>In the <span class="guilabel">File name</span> click <span class="guilabel">…</span>, select a folder location, type a file name such as <code class="docutils literal notranslate"><span class="pre">whole</span> <span class="pre">area.shp</span></code> and <span class="guilabel">Save</span>.</p>
+<figure class="align-center" id="id32">
+<img alt="../../_images/saving-shapefile-layer.png" src="../../_images/saving-shapefile-layer.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 67 </span><span class="caption-text">Saving New Shapefile Layer.</span><a class="headerlink" href="#id32" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> as the <span class="guilabel">Geometry type</span>. Select <code class="docutils literal notranslate"><span class="pre">ESPG:32651</span></code> and click <span class="guilabel">OK</span>.</p>
+<figure class="align-center" id="id33">
+<img alt="../../_images/final-saving-shapefile-layer.png" src="../../_images/final-saving-shapefile-layer.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 68 </span><span class="caption-text">Final Saving New Shapefile Layer.</span><a class="headerlink" href="#id33" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Change the symbology for better visualization. Double left click the square from left of the layer name. Then, select <code class="docutils literal notranslate"><span class="pre">outline</span> <span class="pre">red</span></code> click <span class="guilabel">Apply</span> and <span class="guilabel">OK</span>.</p>
+<figure class="align-center" id="id34">
+<img alt="../../_images/opening-symbology.png" class="img-border" src="../../_images/opening-symbology.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 69 </span><span class="caption-text">Opening symbology in layer properties.</span><a class="headerlink" href="#id34" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id35">
+<img alt="../../_images/changing-symbology.png" src="../../_images/changing-symbology.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 70 </span><span class="caption-text">Changing symbology in layer properties.</span><a class="headerlink" href="#id35" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Draw the polygon. Toggle the layer to be editable by <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span>. Then, click <a class="reference internal" href="../../_images/action-add-polygon.png"><img alt="addPolygon" src="../../_images/action-add-polygon.png" style="width: 1.5em;" /></a> <span class="guilabel">Add Polygon Feature</span> and draw the polygon that encompasses the whole area. You can draw the polygon with just 4 points enough to cover the whole area. <a class="reference internal" href="../../_images/cursor-point.png"><img alt="cursorPoint" src="../../_images/cursor-point.png" style="width: 1.3em;" /></a> draw 4 points, then right click anywhere to end drawing, and click <span class="guilabel">OK</span>. Of course, you do not need to follow the points on the figure just make sure the polygon will encompass the area of interest. Select <a class="reference internal" href="../../_images/action-toggle-editing.png"><img alt="toggleEditing" src="../../_images/action-toggle-editing.png" style="width: 1.5em;" /></a> <span class="guilabel">Toggle Editing</span> to save the changes.</p>
+<figure class="align-center" id="id36">
+<img alt="../../_images/opening-add-polygon-feature.png" class="img-border" src="../../_images/opening-add-polygon-feature.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 71 </span><span class="caption-text">Opening Add Polygon Feature.</span><a class="headerlink" href="#id36" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id37">
+<img alt="../../_images/drawing-polygon.png" src="../../_images/drawing-polygon.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 72 </span><span class="caption-text">Drawing Polygon using Add Polygon Feature.</span><a class="headerlink" href="#id37" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id38">
+<img alt="../../_images/polygon-feature.png" src="../../_images/polygon-feature.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 73 </span><span class="caption-text">Example drawn polygon feature.</span><a class="headerlink" href="#id38" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+<li><p>Go to <span class="guilabel">Area Change Tab</span>.</p>
+<p>In <span class="guilabel">General</span> section, select the created polygon layer as the <span class="guilabel">Polygon boundary</span>, and in <span class="guilabel">Stat</span>, select the NSM layer. Only NSM and EPR statistics are available for area change for now (see <a class="reference internal" href="../tabs/area_change.html#tab-area-change"><span class="std std-ref">Tab: Area Change (Beta)</span></a>).</p>
+<figure class="align-center" id="id39">
+<img alt="../../_images/computing-area-change.png" src="../../_images/computing-area-change.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 74 </span><span class="caption-text">Computing area change in Area Change Tab.</span><a class="headerlink" href="#id39" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id40">
+<img alt="../../_images/example-area-change.png" src="../../_images/example-area-change.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 75 </span><span class="caption-text">Example area change in the top part.</span><a class="headerlink" href="#id40" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+<section id="running-the-forecasting">
+<h3><a class="toc-backref" href="#id60" role="doc-backlink">Running the forecasting</a><a class="headerlink" href="#running-the-forecasting" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Go to <span class="guilabel">Forecasting Tab</span></p>
+<p>In <span class="guilabel">Algorithm</span>, the current available algorithm is <span class="guilabel">Kalman Filter</span> (see <a class="reference internal" href="../tabs/forecasting.html#tab-forecasting-algorithm"><span class="std std-ref">Algorithm</span></a>).</p>
+<p>In <span class="guilabel">Time Period</span>, select <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">10 years</span> (see <a class="reference internal" href="../tabs/forecasting.html#tab-forecasting-time-period"><span class="std std-ref">Time Period</span></a>) and click <span class="guilabel">Forecast</span>.</p>
+<figure class="align-center" id="id41">
+<img alt="../../_images/example-forecasting.png" class="img-border" src="../../_images/example-forecasting.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 76 </span><span class="caption-text">Example forecasting in Forecasting Tab.</span><a class="headerlink" href="#id41" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id42">
+<img alt="../../_images/example-forecasting.png" class="img-border" src="../../_images/example-forecasting.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 77 </span><span class="caption-text">Example forecasting in Forecasting Tab.</span><a class="headerlink" href="#id42" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+<section id="visualizing-the-statistics-transects">
+<h3><a class="toc-backref" href="#id61" role="doc-backlink">Visualizing the statistics transects</a><a class="headerlink" href="#visualizing-the-statistics-transects" title="Permalink to this heading">#</a></h3>
+<ol class="arabic">
+<li><p>Go to <span class="guilabel">Visualization Tab</span></p>
+<p>In <span class="guilabel">Layer</span>, select a statistic layer to apply visualization. In this example, we choose the NSM statistic layer.</p>
+<p>In <span class="guilabel">Color Ramp</span>, leave the number of <span class="guilabel">Negative classes</span> and <span class="guilabel">Positive classes</span> as is. Select <code class="docutils literal notranslate"><span class="pre">Equal</span> <span class="pre">Interval</span></code> as the <span class="guilabel">Mode</span> and click <span class="guilabel">Visualize</span>.</p>
+<figure class="align-center" id="id43">
+<img alt="../../_images/visualizing-nsm-statistic.png" src="../../_images/visualizing-nsm-statistic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 78 </span><span class="caption-text">Visualizing statistics in Visualization Tab.</span><a class="headerlink" href="#id43" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id44">
+<img alt="../../_images/visualized-nsm-statistic.png" src="../../_images/visualized-nsm-statistic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 79 </span><span class="caption-text">Visualized NSM statistic.</span><a class="headerlink" href="#id44" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id45">
+<img alt="../../_images/visualized-nsm-statistic-color-ramp-values.png" class="img-border" src="../../_images/visualized-nsm-statistic-color-ramp-values.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 80 </span><span class="caption-text">Visualized NSM statistic color ramp with equal interval range values.</span><a class="headerlink" href="#id45" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../tabs/about.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tab: About</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="summary_report.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Summary Report</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preparing-the-shoreline-vectors">Preparing the shoreline vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-the-baseline-vectors">Generating the baseline vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-the-shoreline-vectors">Merging the shoreline vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-buffer-using-qscat">Creating a buffer using QSCAT</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-the-buffer-to-baseline-vector">Converting the buffer to baseline vector</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-shoreline-and-baseline-layer-attributes">Configuring the shoreline and baseline layer attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shorelines">Shorelines</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline">Baseline</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-the-selections-of-layer-and-fields">Configuring the selections of layer and fields</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#casting-of-transects">Casting of transects</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-shoreline-change">Computing the shoreline change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-optional-features">Running optional features</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#computing-the-area-change">Computing the area change</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-polygon-using-qgis">Creating the polygon using QGIS</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-the-forecasting">Running the forecasting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-the-statistics-transects">Visualizing the statistics transects</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/qscat/qscat/edit/master/docs/source/manual/others/sample_workflow.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/manual/others/sample_workflow.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, QSCAT.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
