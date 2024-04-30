@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+}
+
+/* change primary color */
+/* a {
+    color: rgb(46, 126, 230);;
+} */
+
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary);
+}
+
+.installation {
+    max-width: 800px;
+}
+
+.workflow-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
