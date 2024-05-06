@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /latest/?badge=latest
+
+
+Sitemap: /docs/latest/sitemap.xml

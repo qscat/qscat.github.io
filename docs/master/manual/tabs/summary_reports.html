@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Tab: Summary Reports &#8212; QSCAT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/qscat.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'manual/tabs/summary_reports';</script>
+    <link rel="canonical" href="https://qscat.readthedocs.io/manual/tabs/summary_reports.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tab: About" href="about.html" />
+    <link rel="prev" title="Tab: Visualization" href="visualization.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2024 May 06, 15:08 +0800"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/qscat-logo.svg" class="logo__image only-light" alt="QSCAT - Home"/>
+    <script>document.write(`<img src="../../_static/qscat-logo-dark.svg" class="logo__image only-dark" alt="QSCAT - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog/index.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/qscatplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/qscatplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog/index.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/qscatplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/qscatplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugin/required_inputs.html">Required Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_settings.html">Tab: Project Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automator.html">Tab: Automator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baseline.html">Tab: Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shorelines.html">Tab: Shorelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transects.html">Tab: Transects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shoreline_change.html">Tab: Shoreline Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="area_change.html">Tab: Area Change (Beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasting.html">Tab: Forecasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tab: Visualization</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tab: Summary Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Tab: About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/sample_workflow.html">Sample Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/help_and_support.html">Help and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/contributors.html">Contributors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../others/appendices/index.html">Appendices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../others/appendices/example_summary_report.html">Appendix 1: Example Summmary Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../others/references.html">References</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Manual</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Tab: Summary Reports</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="tab-summary-reports">
+<span id="id1"></span><h1>Tab: Summary Reports<a class="headerlink" href="#tab-summary-reports" title="Permalink to this heading">#</a></h1>
+<p>The <span class="guilabel">Summary Reports Tab</span> allows you to configure the save location, and enable or disable the generation of summary reports. The summary reports are text files that contain the base information and the summary of results of the shoreline change, area change, and forecasting results.</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#general" id="id7">General</a></p>
+<ul>
+<li><p><a class="reference internal" href="#reports-save-location" id="id8">Reports save location</a></p></li>
+<li><p><a class="reference internal" href="#enable-reports-generation" id="id9">Enable reports generation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#content-of-summary-reports" id="id10">Content of summary reports</a></p>
+<ul>
+<li><p><a class="reference internal" href="#base-information" id="id11">Base information</a></p></li>
+<li><p><a class="reference internal" href="#shoreline-change" id="id12">Shoreline Change</a></p></li>
+<li><p><a class="reference internal" href="#area-change" id="id13">Area Change</a></p></li>
+<li><p><a class="reference internal" href="#forecasting" id="id14">Forecasting</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<figure class="align-center" id="id6">
+<span id="figure-tab-summary-reports"></span><img alt="User interface of Summary Reports Tab" src="../../_images/summary-reports-tab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 43 </span><span class="caption-text">User interface of Summary Reports Tab</span><a class="headerlink" href="#id6" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="general">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">General</a><a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
+<section id="reports-save-location">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Reports save location</a><a class="headerlink" href="#reports-save-location" title="Permalink to this heading">#</a></h3>
+<p>Allows you to choose the folder in which to save the summary reports. Defaults to <code class="docutils literal notranslate"><span class="pre">QSCATSummaryReports</span></code> under your user home directory. Additionally, each results type (shoreline change, area change, and forecasting) will be saved inside another folder within the specified folder. The filename of the report will be in the format <code class="docutils literal notranslate"><span class="pre">qscat_&lt;version&gt;_&lt;result_type&gt;_&lt;datetime&gt;.txt</span></code>, where the datetime is in the format <code class="docutils literal notranslate"><span class="pre">MM-DD-YY</span> <span class="pre">HH-MM-SS</span></code>. The following table shows the folder structure and the filename format of the summary reports.</p>
+<table class="table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Result</p></th>
+<th class="head"><p>Folder</p></th>
+<th class="head"><p>File name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Shoreline Change</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">shoreline_change</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qscat_&lt;version&gt;_shoreline_change_&lt;datetime&gt;.txt</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Area Change</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">area_change</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qscat_&lt;version&gt;_area_change_&lt;datetime&gt;.txt</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Forecasting</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">forecasting</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">qscat_&lt;version&gt;_forecasting_&lt;datetime&gt;.txt</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<section id="example-of-the-folder-structure-and-file-name">
+<h4>Example of the folder structure and file name<a class="headerlink" href="#example-of-the-folder-structure-and-file-name" title="Permalink to this heading">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>── QSCATSummaryReports/
+   ├── shoreline_change/
+   │   ├── qscat_0.3.1_shoreline_change_04-29-24 15-15-28.txt
+   │   ├── qscat_0.3.1_shoreline_change_05-01-24 10-30-12.txt
+   │   └── ...
+   │
+   ├── area_change/
+   │   ├── qscat_0.3.1_area_change_04-30-24 20-45-33.txt
+   │   ├── qscat_0.3.1_area_change_05-02-24 14-25-46.txt
+   │   └── ...
+   │
+   └── forecasting/
+       ├── qscat_0.3.1_forecasting_04-28-24 18-55-21.txt
+       ├── qscat_0.3.1_forecasting_05-03-24 09-10-58.txt
+       └── ...
+</pre></div>
+</div>
+</section>
+</section>
+<section id="enable-reports-generation">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Enable reports generation</a><a class="headerlink" href="#enable-reports-generation" title="Permalink to this heading">#</a></h3>
+<p>A convenient way to enable or disable the generation of summary reports. You can also enable or disable the generation of individual reports of Shoreline Change, Area Change, and Forecasting results.</p>
+</section>
+</section>
+<section id="content-of-summary-reports">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Content of summary reports</a><a class="headerlink" href="#content-of-summary-reports" title="Permalink to this heading">#</a></h2>
+<section id="base-information">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Base information</a><a class="headerlink" href="#base-information" title="Permalink to this heading">#</a></h3>
+<p>Regardless of the type of result (shoreline change, area change, or forecasting), the base information is always written at the top of the text file. The base information contains standard details such as general info, projection, metadata, and system details. The following are information that are included in the base information:</p>
+<section id="project-details">
+<h4>Project details<a class="headerlink" href="#project-details" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Time generated:</strong> Date and time the report was generated (<code class="docutils literal notranslate"><span class="pre">MM-DD-YYYY</span> <span class="pre">HH-MM-SS</span></code>)</p></li>
+<li><p><strong>Project location:</strong> Folder location of the QGIS project (<code class="file docutils literal notranslate"><span class="pre">.qgz</span></code>)</p></li>
+<li><p><strong>Projection:</strong> CRS auth id of the QGIS project (e.g <code class="docutils literal notranslate"><span class="pre">EPSG:32651</span></code>)</p></li>
+</ul>
+</section>
+<section id="metadata">
+<h4>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Author full name:</strong> Metadata of the QGIS project</p></li>
+<li><p><strong>Author affiliation:</strong> Metadata of the QGIS project</p></li>
+<li><p><strong>Author email:</strong> Metadata of the QGIS project</p></li>
+</ul>
+</section>
+<section id="system-details">
+<h4>System details<a class="headerlink" href="#system-details" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>OS version:</strong> Operating system name and version (e.g. <code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">6.5.0-18-generic</span></code>)</p></li>
+<li><p><strong>QGIS version:</strong> QGIS version and name (e.g. <code class="docutils literal notranslate"><span class="pre">3.34.5-Prizrena</span></code>)</p></li>
+<li><p><strong>QSCAT version:</strong> QSCAT plugin version (e.g. <code class="docutils literal notranslate"><span class="pre">0.3.1</span></code>)</p></li>
+</ul>
+</section>
+</section>
+<section id="shoreline-change">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Shoreline Change</a><a class="headerlink" href="#shoreline-change" title="Permalink to this heading">#</a></h3>
+<section id="input-parameters">
+<h4>Input parameters<a class="headerlink" href="#input-parameters" title="Permalink to this heading">#</a></h4>
+<p><strong>Shorelines Tab</strong></p>
+<ul class="simple">
+<li><p><strong>Layer:</strong> Layer name of the selected shorelines</p></li>
+<li><p><strong>Default data uncertainty:</strong> Default data uncertainty value</p></li>
+<li><p><strong>Date field:</strong> Field name of the selected shorelines date</p></li>
+<li><p><strong>Uncertainty field:</strong> Field name of the selected shorelines uncertainty value</p></li>
+<li><p><strong>Dates:</strong> List of date values of the selected shorelines (format <code class="docutils literal notranslate"><span class="pre">MM/YYYY</span></code>)</p></li>
+<li><p><strong>Uncertainties:</strong> List of uncertainty values of the selected shorelines</p></li>
+</ul>
+<p><strong>Baseline Tab</strong></p>
+<ul class="simple">
+<li><p><strong>Layer:</strong> Layer name of the selected baseline</p></li>
+<li><p><strong>Placement:</strong> Placement of the selected baseline</p></li>
+<li><p><strong>Orientation:</strong> Orientation of the selected baseline</p></li>
+</ul>
+<p><strong>Transects Tab</strong></p>
+<ul class="simple">
+<li><p><strong>Layer output name:</strong> Layer output name of the transects</p></li>
+<li><p><strong>Transect count:</strong> By transect spacing or number of transects</p></li>
+<li><p><strong>Transect spacing:</strong> Transect spacing value (if by transect spacing is selected)</p></li>
+<li><p><strong>By number of transects:</strong> Number of transects value (if by number of transects is selected)</p></li>
+<li><p><strong>Transect length:</strong> Transect length value</p></li>
+<li><p><strong>Smoothing distance:</strong> Smoothing distance value</p></li>
+</ul>
+<p><strong>Shoreline Change Tab</strong></p>
+<ul class="simple">
+<li><p><strong>Transects layer:</strong> Layer name of the selected transects</p></li>
+<li><p><strong>Clip transects:</strong> Yes or No</p></li>
+<li><p><strong>Intersections:</strong> Choose by distance or choose by placement</p></li>
+<li><p><strong>By distance:</strong> Farthest or closest (if choose by distance is selected)</p></li>
+<li><p><strong>By placement:</strong> Seaward or landward (if choose by placement is selected)</p></li>
+<li><p><strong>Selected statistics:</strong> List of selected shoreline change statistics</p></li>
+<li><p><strong>Newest date:</strong> Selected newest date of the selected shorelines</p></li>
+<li><p><strong>Oldest date:</strong> Selected oldest date of the selected shorelines</p></li>
+<li><p><strong>Newest year:</strong> Selected newest date converted into decimal year in pairwise comparison of shorelines</p></li>
+<li><p><strong>Oldest year:</strong> Selected oldest date converted into decimal year in pairwise comparison of shorelines</p></li>
+<li><p><strong>Confidence interval:</strong> Confidence interval value in percentage</p></li>
+</ul>
+</section>
+<section id="summary-of-results">
+<h4>Summary of results<a class="headerlink" href="#summary-of-results" title="Permalink to this heading">#</a></h4>
+<p><strong>SHORELINE CHANGE ENVELOPE (SCE)</strong></p>
+<ul class="simple">
+<li><p><strong>Avg. value:</strong> Average value of the SCE</p></li>
+<li><p><strong>Max. value:</strong> Maximum value of the SCE</p></li>
+<li><p><strong>Min. value:</strong> Minimum value of the SCE</p></li>
+</ul>
+<p><strong>NET SHORELINE MOVEMENT (NSM)</strong></p>
+<ul class="simple">
+<li><p><strong>Avg. distance:</strong> Average value of the NSM</p></li>
+</ul>
+<p><strong>Eroding, Accreting, and Stable:</strong></p>
+<ul class="simple">
+<li><p><strong>No. of transects:</strong> Number of transects</p></li>
+<li><p><strong>(%) transects:</strong> Percentage of transects</p></li>
+<li><p><strong>Avg. value:</strong> Average value</p></li>
+<li><p><strong>Max. value:</strong> Maximum value</p></li>
+<li><p><strong>Min. value:</strong> Minimum value</p></li>
+</ul>
+<p><strong>END POINT RATE (EPR)</strong></p>
+<ul class="simple">
+<li><p><strong>Avg. rate:</strong> Average value of the EPR</p></li>
+</ul>
+<p><strong>Eroding, Accreting, and Stable:</strong></p>
+<ul class="simple">
+<li><p><strong>No. of transects:</strong> Number of transects</p></li>
+<li><p><strong>(%) transects:</strong> Percentage of transects</p></li>
+<li><p><strong>Avg. value:</strong> Average value</p></li>
+<li><p><strong>Max. value:</strong> Maximum value</p></li>
+<li><p><strong>Min. value:</strong> Minimum value</p></li>
+</ul>
+<p><strong>LINEAR REGRESSION RATE (LRR)</strong></p>
+<p><strong>Eroding and Accreting:</strong></p>
+<ul class="simple">
+<li><p><strong>No. of transects:</strong> Number of transects</p></li>
+<li><p><strong>(%) transects:</strong> Percentage of transects</p></li>
+<li><p><strong>Avg. value:</strong> Average value</p></li>
+<li><p><strong>Max. value:</strong> Maximum value</p></li>
+<li><p><strong>Min. value:</strong> Minimum value</p></li>
+</ul>
+<p><strong>WEIGHTED REGRESSION RATE (WLR)</strong></p>
+<p><strong>Eroding and Accreting:</strong></p>
+<ul class="simple">
+<li><p><strong>No. of transects:</strong> Number of transects</p></li>
+<li><p><strong>(%) transects:</strong> Percentage of transects</p></li>
+<li><p><strong>Avg. value:</strong> Average value</p></li>
+<li><p><strong>Max. value:</strong> Maximum value</p></li>
+<li><p><strong>Min. value:</strong> Minimum value</p></li>
+</ul>
+</section>
+</section>
+<section id="area-change">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Area Change</a><a class="headerlink" href="#area-change" title="Permalink to this heading">#</a></h3>
+<section id="id2">
+<h4>Input parameters<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Polygon layer:</strong> Layer name of the selected polygon layer</p></li>
+<li><p><strong>Shoreline change statistic layer:</strong> Layer name of the selected shoreline change statistic layer</p></li>
+</ul>
+</section>
+<section id="id3">
+<h4>Summary of results<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<p><strong>AREA CHANGE</strong></p>
+<ul class="simple">
+<li><p><strong>Total area:</strong> Total square meters area value</p></li>
+</ul>
+<p><strong>Eroding, Accreting, and Stable</strong></p>
+<ul class="simple">
+<li><p><strong>(%) of areas:</strong> Percentage of area value in total area</p></li>
+<li><p><strong>No. of areas:</strong> Number of areas with</p></li>
+<li><p><strong>(%) of no. areas:</strong> Percentage of number of areas</p></li>
+<li><p><strong>Avg. value:</strong> Average area value</p></li>
+<li><p><strong>Max. value:</strong> Maximum area value</p></li>
+<li><p><strong>Min. value:</strong> Minimum area value</p></li>
+</ul>
+<p><strong>NEWEST AND OLDEST SHORELINE (LENGTH)</strong></p>
+<ul class="simple">
+<li><p><strong>Total length:</strong> Total length value in meters</p></li>
+</ul>
+<p><strong>Eroding, Accreting, and Stable</strong></p>
+<ul class="simple">
+<li><p><strong>Total of lengths:</strong> Total length value in meters</p></li>
+<li><p><strong>(%) of lengths:</strong> Percentage of length value in total length</p></li>
+<li><p><strong>No. of lengths:</strong> Number of lengths</p></li>
+<li><p><strong>(%) of no. lengths:</strong> Percentage of number of lengths</p></li>
+<li><p><strong>Avg. value:</strong> Average length value</p></li>
+<li><p><strong>Max. value:</strong> Maximum length value</p></li>
+<li><p><strong>Min. value:</strong> Minimum length value</p></li>
+</ul>
+<p><strong>MEAN SHORELINE DISPLACEMENT</strong></p>
+<ul class="simple">
+<li><p><strong>Avg. value:</strong> Average value</p></li>
+<li><p><strong>Max. value:</strong> Maximum value</p></li>
+<li><p><strong>Min. value:</strong> Minimum value</p></li>
+</ul>
+</section>
+</section>
+<section id="forecasting">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Forecasting</a><a class="headerlink" href="#forecasting" title="Permalink to this heading">#</a></h3>
+<section id="id4">
+<h4>Input parameters<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="id5">
+<h4>Summary of results<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<p><strong>Forecast points</strong></p>
+<p><em>Content for this section will be added soon.</em></p>
+<p><strong>Forecast line</strong></p>
+<p><em>Content for this section will be added soon.</em></p>
+<p><strong>Forecast area</strong></p>
+<p><em>Content for this section will be added soon.</em></p>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="visualization.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tab: Visualization</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="about.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tab: About</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reports-save-location">Reports save location</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-the-folder-structure-and-file-name">Example of the folder structure and file name</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enable-reports-generation">Enable reports generation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#content-of-summary-reports">Content of summary reports</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#base-information">Base information</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#project-details">Project details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#metadata">Metadata</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#system-details">System details</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-change">Shoreline Change</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#input-parameters">Input parameters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-results">Summary of results</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#area-change">Area Change</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Input parameters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Summary of results</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forecasting">Forecasting</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Input parameters</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Summary of results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/qscat/qscat/edit/master/docs/source/manual/tabs/summary_reports.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/manual/tabs/summary_reports.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, QSCAT.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>

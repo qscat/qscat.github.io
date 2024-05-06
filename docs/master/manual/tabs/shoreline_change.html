@@ -1,0 +1,1114 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Tab: Shoreline Change &#8212; QSCAT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/qscat.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'manual/tabs/shoreline_change';</script>
+    <link rel="canonical" href="https://qscat.readthedocs.io/manual/tabs/shoreline_change.html" />
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tab: Area Change (Beta)" href="area_change.html" />
+    <link rel="prev" title="Tab: Transects" href="transects.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+    <meta name="docbuild:last-update" content="2024 May 06, 15:08 +0800"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/qscat-logo.svg" class="logo__image only-light" alt="QSCAT - Home"/>
+    <script>document.write(`<img src="../../_static/qscat-logo-dark.svg" class="logo__image only-dark" alt="QSCAT - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog/index.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/qscatplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/qscatplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../index.html">
+                        User Manual
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../changelog/index.html">
+                        Changelog
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/qscat/qscat" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://facebook.com/qscatplugin" title="Facebook" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-facebook fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Facebook</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/qscatplugin" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plugin/required_inputs.html">Required Inputs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project_settings.html">Tab: Project Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automator.html">Tab: Automator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baseline.html">Tab: Baseline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shorelines.html">Tab: Shorelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="transects.html">Tab: Transects</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tab: Shoreline Change</a></li>
+<li class="toctree-l1"><a class="reference internal" href="area_change.html">Tab: Area Change (Beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="forecasting.html">Tab: Forecasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">Tab: Visualization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="summary_reports.html">Tab: Summary Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about.html">Tab: About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/sample_workflow.html">Sample Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/help_and_support.html">Help and Support</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../others/contributors.html">Contributors</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../others/appendices/index.html">Appendices</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../others/appendices/example_summary_report.html">Appendix 1: Example Summmary Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../others/references.html">References</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">User Manual</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Tab:...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="tab-shoreline-change">
+<span id="id1"></span><h1>Tab: Shoreline Change<a class="headerlink" href="#tab-shoreline-change" title="Permalink to this heading">#</a></h1>
+<p>The <span class="guilabel">Shoreline Change Tab</span> allows you to calculate the following shoreline change statistics: (a) Shoreline Change Envelope (SCE), (b) Net Shoreline Movement (NSM), (c) End-Point Rate (EPR), and (d) Linear Regression Rate (LRR). The first three statistics (SCE, NSM, and EPR) require only two shoreline vectors, while LRR requires at least three (3) shoreline vectors to compute the rate of change. SCE and NSM refer to magnitude or distance in meters (m), while EPR and LRR are rate-of-change statistics in meters/year (m/y).</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#general" id="id19">General</a></p>
+<ul>
+<li><p><a class="reference internal" href="#transects-layer" id="id20">Transects layer</a></p></li>
+<li><p><a class="reference internal" href="#clip-transects" id="id21">Clip transects</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#transect-shoreline-intersections" id="id22">Transect-shoreline intersections</a></p></li>
+<li><p><a class="reference internal" href="#shoreline-change-statistics" id="id23">Shoreline change statistics</a></p>
+<ul>
+<li><p><a class="reference internal" href="#shoreline-change-envelope-sce" id="id24">Shoreline Change Envelope (SCE)</a></p></li>
+<li><p><a class="reference internal" href="#net-shoreline-movement-nsm" id="id25">Net Shoreline Movement (NSM)</a></p></li>
+<li><p><a class="reference internal" href="#end-point-rate-epr" id="id26">End-Point Rate (EPR)</a></p></li>
+<li><p><a class="reference internal" href="#linear-regression-rate-lrr" id="id27">Linear Regression Rate (LRR)</a></p></li>
+<li><p><a class="reference internal" href="#weighted-linear-regression-wlr" id="id28">Weighted Linear Regression (WLR)</a></p></li>
+<li><p><a class="reference internal" href="#supplementary-statistics" id="id29">Supplementary Statistics</a></p>
+<ul>
+<li><p><a class="reference internal" href="#uncertainty-of-end-point-rate-epr-unc" id="id30">Uncertainty of End-Point Rate (EPR_unc)</a></p></li>
+<li><p><a class="reference internal" href="#r-squared-of-linear-regression-lr2-or-wr2" id="id31">R-Squared of Linear Regression (LR2 or WR2)</a></p></li>
+<li><p><a class="reference internal" href="#standard-error-of-estimate-of-linear-regression-lse-or-wse" id="id32">Standard Error of Estimate of Linear Regression (LSE or WSE)</a></p></li>
+<li><p><a class="reference internal" href="#confidence-interval-of-linear-regression-lci-or-wci" id="id33">Confidence Interval of Linear Regression (LCI or WCI)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#pairwise-comparison-of-shorelines" id="id34">Pairwise comparison of shorelines</a></p></li>
+<li><p><a class="reference internal" href="#additional-parameters" id="id35">Additional parameters</a></p></li>
+<li><p><a class="reference internal" href="#vector-layer-output" id="id36">Vector layer output</a></p>
+<ul>
+<li><p><a class="reference internal" href="#layers" id="id37">Layers</a></p></li>
+<li><p><a class="reference internal" href="#attributes" id="id38">Attributes</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id6" id="id39">Shoreline Change Envelope (SCE)</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id40">Net Shoreline Movement (NSM)</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id41">End-Point Rate (EPR)</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id42">Linear Regression Rate (LRR)</a></p></li>
+<li><p><a class="reference internal" href="#id10" id="id43">Weighted Linear Regression (WLR)</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<figure class="align-center" id="id11">
+<span id="figure-tab-shoreline-change"></span><img alt="User interface of Shoreline Change Tab" src="../../_images/shoreline-change-tab.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">User interface of Shoreline Change Tab</span><a class="headerlink" href="#id11" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="general">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">General</a><a class="headerlink" href="#general" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id12">
+<span id="figure-tab-shoreline-change-general"></span><img alt="General section in Shoreline Change Tab" src="../../_images/shoreline-change-tab-general.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 27 </span><span class="caption-text">General section in Shoreline Change Tab</span><a class="headerlink" href="#id12" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="transects-layer">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Transects layer</a><a class="headerlink" href="#transects-layer" title="Permalink to this heading">#</a></h3>
+<p>This run requires a transect layer to calculate the selected statistics in the <span class="guilabel">Shoreline Change Statistics</span> section. The output statistics will be tabulated in the Attribute Table, which can then be exported as a worksheet file and/or viewed in map format.</p>
+</section>
+<section id="clip-transects">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Clip transects</a><a class="headerlink" href="#clip-transects" title="Permalink to this heading">#</a></h3>
+<p>By default, the transects are not clipped to the farthest shoreline extent. However, you have the power to choose whether to clip the shorelines by checking this box. The clipping has no effects on the statistics, but it will make seeing statistics’ transects easier.</p>
+</section>
+</section>
+<section id="transect-shoreline-intersections">
+<span id="tab-shoreline-change-tsi"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink">Transect-shoreline intersections</a><a class="headerlink" href="#transect-shoreline-intersections" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id13">
+<span id="figure-tab-shoreline-change-transect-shorelines-intersections"></span><img alt="Transects-shoreline intersections in Shoreline Change Tab" src="../../_images/shoreline-change-tab-transect-shorelines-intersections.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Transect-shoreline intersections section in Shoreline Change Tab</span><a class="headerlink" href="#id13" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<span id="figure-transects-shoreline-intersections"></span><img alt="Guide on determining the intersection point of transects and shorelines" src="../../_images/transects-shorelines-intersections.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Guide on determining the intersection point of transects and shorelines</span><a class="headerlink" href="#id14" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Sometimes, a transect intersects the shoreline vector at more than one point, particularly on curved segments (<a class="reference internal" href="#figure-transects-shoreline-intersections"><span class="std std-numref">Fig. 29</span></a>). To handle shoreline vector/s with multiple intersections, QSCAT allows you to choose the intersection point by distance (i.e., farthest or closest to the baseline) or by placement (seaward or landward, similar to DSAS). As it will affect the distance between the intersection points at the baseline and the shoreline, it is recommended that the selected option be applied to all shorelines for analysis.</p>
+</section>
+<section id="shoreline-change-statistics">
+<span id="tab-shoreline-change-scs"></span><h2><a class="toc-backref" href="#id23" role="doc-backlink">Shoreline change statistics</a><a class="headerlink" href="#shoreline-change-statistics" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id15">
+<span id="figure-tab-shoreline-change-statistics"></span><img alt="Shoreline change statistics in Shoreline Change Tab" src="../../_images/shoreline-change-tab-shoreline-change-statistics.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Shoreline change statistics section in Shoreline Change Tab</span><a class="headerlink" href="#id15" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The shoreline change statistics in QSCAT and the resulting sample attribute table (<a class="reference internal" href="#table-shoreline-change-statistics"><span class="std std-numref">Table 1</span></a>) are described below.</p>
+<span id="table-shoreline-change-statistics"></span><table class="table" id="id16">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Shoreline change statistics acronyms</span><a class="headerlink" href="#id16" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Statistics</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SCE</span></code></p></td>
+<td><p>Shoreline Change Envelope</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NSM</span></code></p></td>
+<td><p>Net Shoreline Movement</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EPR</span></code></p></td>
+<td><p>End-Point Rate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">EPR_unc</span></code></p></td>
+<td><p>Uncertainty of End-Point Rate</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LRR</span></code></p></td>
+<td><p>Linear Regression Rate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LR2</span></code></p></td>
+<td><p>R-Squared of Linear Regression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LSE</span></code></p></td>
+<td><p>Standard Error of Linear Regression</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LCI</span></code></p></td>
+<td><p>Confidence Interval of Linear Regression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WLR</span></code></p></td>
+<td><p>Weighted Linear Regression Rate</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WR2</span></code></p></td>
+<td><p>R-Squared of Weighted Linear Regression</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WSE</span></code></p></td>
+<td><p>Standard Error of Weighted Linear Regression</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WCI</span></code></p></td>
+<td><p>Confidence Interval of Weighted Linear Regression</p></td>
+</tr>
+</tbody>
+</table>
+<section id="shoreline-change-envelope-sce">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Shoreline Change Envelope (SCE)</a><a class="headerlink" href="#shoreline-change-envelope-sce" title="Permalink to this heading">#</a></h3>
+<p>The shoreline change envelope (SCE) is the maximum distance, in meters (m), among all the shorelines intersecting a given transect <span id="id2">[<a class="reference internal" href="../others/references.html#id3" title="Emily A Himmelstoss, Rachel E Henderson, Meredith G Kratzmann, and Amy S Farris. Digital shoreline analysis system (dsas) version 5.0 user guide. Technical Report, US Geological Survey, 2018.">Himmelstoss <em>et al.</em>, 2018</a>]</span>. If there are multiple shoreline vectors, one can quickly identify the most significant magnitude of shoreline movement (<code class="docutils literal notranslate"><span class="pre">SCE_value</span></code> column) and when it occurred (<code class="docutils literal notranslate"><span class="pre">SCE_closest</span></code> year and <code class="docutils literal notranslate"><span class="pre">SCE_farthest</span></code> year columns) in the resulting attribute table of shoreline change statistics (<a class="reference internal" href="#table-shoreline-change-statistics"><span class="std std-numref">Table 1</span></a>). Since SCE is a distance, all values are positive. The shoreline trends can be inferred from the <code class="docutils literal notranslate"><span class="pre">SCE_trend</span></code> column, depending on whether SCE represents erosion, accretion, or stability.</p>
+<div class="math notranslate nohighlight">
+\[SCE = farthest\_year\_distance - closest\_year\_distance\]</div>
+</section>
+<section id="net-shoreline-movement-nsm">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Net Shoreline Movement (NSM)</a><a class="headerlink" href="#net-shoreline-movement-nsm" title="Permalink to this heading">#</a></h3>
+<p>The net shoreline movement (NSM) represents the magnitude of shoreline change between the oldest and youngest shorelines in meters (m) and is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[NSM = oldest\_year\_distance - newest\_year\_distance\]</div>
+<p>The uncertainty is based on the shoreline with the largest uncertainty values in the attribute table of the input layer.</p>
+</section>
+<section id="end-point-rate-epr">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">End-Point Rate (EPR)</a><a class="headerlink" href="#end-point-rate-epr" title="Permalink to this heading">#</a></h3>
+<p>The end-point rate (<code class="docutils literal notranslate"><span class="pre">EPR</span></code>) is the rate of change based on <code class="docutils literal notranslate"><span class="pre">NSM</span></code>, in meters/year (m/y), and is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[EPR = \frac{NSM}{newest\_shoreline\_year - oldest\_shoreline\_year}\]</div>
+<p>Both <code class="docutils literal notranslate"><span class="pre">NSM</span></code> and <code class="docutils literal notranslate"><span class="pre">EPR</span></code> require only two shoreline vectors, the youngest and oldest. QSCAT will ignore any shoreline vector/s between the youngest and oldest years. As such, it provides no information about shoreline movement during the intervening years, even if there are multiple shoreline positions in the input layer. Additional information may be inferred from the <code class="docutils literal notranslate"><span class="pre">SCE</span></code>, which can at least identify the greatest magnitude of change and the corresponding period for a given set of shoreline vectors.</p>
+</section>
+<section id="linear-regression-rate-lrr">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Linear Regression Rate (LRR)</a><a class="headerlink" href="#linear-regression-rate-lrr" title="Permalink to this heading">#</a></h3>
+<p>For multiple shoreline positions, a more appropriate rate-of-change statistic to use is the linear regression rate-of-change (LRR) since it takes into consideration all shoreline positions in the calculation, not just the endpoints like NSM and EPR do. In fact, LRR requires at least three (3) shoreline vectors or intersection points to calculate the rate of change, in m/y, for a given transect. LRR is determined from the slope of a least-squares regression line fitted to all shoreline intersection points for each transect.</p>
+<div class="math notranslate nohighlight">
+\[LRR = \frac{\sum_{i=1}^{n} (x_i - \bar{x})*(y_i - \bar{y})}{\sum_{i=1}^{n} (x_i - \bar{x})*(x_i - \bar{x})}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - length of years and distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> - mean of years</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{y}\)</span> - mean of distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> - i<sup>th</sup> year</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span> - i<sup>th</sup> distance</p></li>
+</ul>
+</section>
+<section id="weighted-linear-regression-wlr">
+<h3><a class="toc-backref" href="#id28" role="doc-backlink">Weighted Linear Regression (WLR)</a><a class="headerlink" href="#weighted-linear-regression-wlr" title="Permalink to this heading">#</a></h3>
+<p>In WLR, uncertainty values are converted to weights:</p>
+<div class="math notranslate nohighlight">
+\[weight = \frac{1}{e^2}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(e\)</span> - uncertainty value of a shoreline</p></li>
+</ul>
+<p>Then, a weighted linear regression is performed using the weights. The resulting slope is the WLR:</p>
+<div class="math notranslate nohighlight">
+\[WLR = \frac{\sum_{i=1}^{n} (x_i - \bar{x}_w)*(y_i - \bar{y}_w)*weight_i}{\sum_{i=1}^{n} (x_i - \bar{x}_w)^2 * weight_i}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - length of years and distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{x}_w\)</span> - weighted mean of years</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{y}_w\)</span> - weighted mean of distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> - i<sup>th</sup> year</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span> - i<sup>th</sup> distance</p></li>
+<li><p><span class="math notranslate nohighlight">\(weight_i\)</span> - i<sup>th</sup> weight</p></li>
+</ul>
+</section>
+<section id="supplementary-statistics">
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Supplementary Statistics</a><a class="headerlink" href="#supplementary-statistics" title="Permalink to this heading">#</a></h3>
+<section id="uncertainty-of-end-point-rate-epr-unc">
+<h4><a class="toc-backref" href="#id30" role="doc-backlink">Uncertainty of End-Point Rate (EPR_unc)</a><a class="headerlink" href="#uncertainty-of-end-point-rate-epr-unc" title="Permalink to this heading">#</a></h4>
+<p>The uncertainty of EPR (<code class="docutils literal notranslate"><span class="pre">EPR_unc</span></code>) is based on the following formula, after DSAS <span id="id3">[<a class="reference internal" href="../others/references.html#id3" title="Emily A Himmelstoss, Rachel E Henderson, Meredith G Kratzmann, and Amy S Farris. Digital shoreline analysis system (dsas) version 5.0 user guide. Technical Report, US Geological Survey, 2018.">Himmelstoss <em>et al.</em>, 2018</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[EPR\_unc = \frac{{\sqrt{{(uncyA)^2 + (uncyB)^2}}}}{yearA - yearB}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(uncyA\)</span> - uncertainty of the youngest shoreline A</p></li>
+<li><p><span class="math notranslate nohighlight">\(uncyB\)</span> - uncertainty of the oldest shoreline B</p></li>
+<li><p><span class="math notranslate nohighlight">\(yearA\)</span> - year of youngest shoreline A</p></li>
+<li><p><span class="math notranslate nohighlight">\(yearB\)</span> - year of oldest shoreline B</p></li>
+</ul>
+</section>
+<section id="r-squared-of-linear-regression-lr2-or-wr2">
+<span id="id4"></span><h4><a class="toc-backref" href="#id31" role="doc-backlink">R-Squared of Linear Regression (LR2 or WR2)</a><a class="headerlink" href="#r-squared-of-linear-regression-lr2-or-wr2" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[LR2\ or\ WR2 = 1 - \sqrt{\frac{\sum_{i=1}^{n} (y_i-\hat{y}_i)^2}{\sum_{i=1}^{n} (y_i-\bar{y})^2}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - length of years and distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{y}\)</span> - predicted i<sup>th</sup> distance (<span class="math notranslate nohighlight">\(LRR\ or\ WLR*x_i + intercept\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{y}\)</span> - mean of distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span> - actual i<sup>th</sup> distance</p></li>
+</ul>
+</section>
+<section id="standard-error-of-estimate-of-linear-regression-lse-or-wse">
+<h4><a class="toc-backref" href="#id32" role="doc-backlink">Standard Error of Estimate of Linear Regression (LSE or WSE)</a><a class="headerlink" href="#standard-error-of-estimate-of-linear-regression-lse-or-wse" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[LSE\ or\ WSE  = \sqrt{\frac{\sum_{i=1}^{n} (y_i-\hat{y}_i)^2}{n-2}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - length of years and distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(\hat{y}\)</span> - predicted i<sup>th</sup> distance (<span class="math notranslate nohighlight">\(LRR\ or\ WLR*x_i + intercept\)</span>)</p></li>
+<li><p><span class="math notranslate nohighlight">\(y_i\)</span> - actual i<sup>th</sup> distance</p></li>
+</ul>
+</section>
+<section id="confidence-interval-of-linear-regression-lci-or-wci">
+<h4><a class="toc-backref" href="#id33" role="doc-backlink">Confidence Interval of Linear Regression (LCI or WCI)</a><a class="headerlink" href="#confidence-interval-of-linear-regression-lci-or-wci" title="Permalink to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[LCI\ or\ WCI  = t\_inv(n-2,\ 1-\alpha/2) *  \sqrt{\frac{LSE^2\ or\ WSE^2}{\sum_{i=1}^{n}(x_i-\bar{x})^2}}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> - <span class="math notranslate nohighlight">\(1 - (confidence\_interval*.01)\)</span> (confidence interval in percent)</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\_inv()\)</span> - student’s t-distribution function</p></li>
+<li><p><span class="math notranslate nohighlight">\(LSE\)</span> - standard error of estimate of linear regression</p></li>
+<li><p><span class="math notranslate nohighlight">\(WSE\)</span> - standard error of estimate of weighted linear regression</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> - length of years and distances</p></li>
+<li><p><span class="math notranslate nohighlight">\(\bar{x}\)</span> - mean of years</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> - i<sup>th</sup> year</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="pairwise-comparison-of-shorelines">
+<span id="tab-shoreline-change-pcs"></span><h2><a class="toc-backref" href="#id34" role="doc-backlink">Pairwise comparison of shorelines</a><a class="headerlink" href="#pairwise-comparison-of-shorelines" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id17">
+<img alt="Pairwise comparison of shorelines in Shoreline Change Tab" src="../../_images/shoreline-change-tab-pairwise-comparison-of-shorelines.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Pairwise comparison of shorelines in Shoreline Change Tab</span><a class="headerlink" href="#id17" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>By default, NSM and EPR calculate the magnitude and rate of shoreline changes between the oldest and most recent shorelines, even if multiple shorelines are available. In QSCAT, the algorithm for calculating NSM and EPR can be applied to any two shorelines from the selected shoreline layer by specifying the dates of the two shorelines for comparison. While LRR can estimate the net rate of change among multiple shorelines, the pairwise comparison can better understand how the shoreline has evolved over different periods, as well as the possible causes of the observed trends.</p>
+</section>
+<section id="additional-parameters">
+<span id="tab-shoreline-change-additional-parameters"></span><h2><a class="toc-backref" href="#id35" role="doc-backlink">Additional parameters</a><a class="headerlink" href="#additional-parameters" title="Permalink to this heading">#</a></h2>
+<figure class="align-center" id="id18">
+<img alt="Additional parameters in Shoreline Change Tab" src="../../_images/shoreline-change-tab-additional-parameters.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Additional parameters section in Shoreline Change Tab</span><a class="headerlink" href="#id18" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Currently, additional parameters include a field that defines the confidence interval value for calculating LCI and WCI. The default value is 99.7%, based on DSAS <span id="id5">[<a class="reference internal" href="../others/references.html#id3" title="Emily A Himmelstoss, Rachel E Henderson, Meredith G Kratzmann, and Amy S Farris. Digital shoreline analysis system (dsas) version 5.0 user guide. Technical Report, US Geological Survey, 2018.">Himmelstoss <em>et al.</em>, 2018</a>]</span>.</p>
+</section>
+<section id="vector-layer-output">
+<span id="tab-shoreline-change-vector-layer-output-name"></span><h2><a class="toc-backref" href="#id36" role="doc-backlink">Vector layer output</a><a class="headerlink" href="#vector-layer-output" title="Permalink to this heading">#</a></h2>
+<section id="layers">
+<h3><a class="toc-backref" href="#id37" role="doc-backlink">Layers</a><a class="headerlink" href="#layers" title="Permalink to this heading">#</a></h3>
+<table class="table">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 20%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Layer</p></th>
+<th class="head"><p>Geometry</p></th>
+<th class="head"><p>Name</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SCE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LineString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">SCE</span> <span class="pre">[&lt;datetime&gt;]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NSM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LineString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">NSM</span> <span class="pre">(newest_year</span> <span class="pre">-</span> <span class="pre">oldest_year)</span> <span class="pre">[&lt;datetime&gt;]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EPR,</span> <span class="pre">EPR_unc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LineString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">EPR</span> <span class="pre">(newest_year</span> <span class="pre">-</span> <span class="pre">oldest_year)</span> <span class="pre">[&lt;datetime&gt;]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LRR,</span> <span class="pre">LR2,</span> <span class="pre">LSE,</span> <span class="pre">LCI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LineString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LRR</span> <span class="pre">[&lt;datetime&gt;]</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WLR,</span> <span class="pre">WR2,</span> <span class="pre">WSE,</span> <span class="pre">WCI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">LineString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">WLR</span> <span class="pre">[&lt;datetime&gt;]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3><a class="toc-backref" href="#id38" role="doc-backlink">Attributes</a><a class="headerlink" href="#attributes" title="Permalink to this heading">#</a></h3>
+<section id="id6">
+<h4><a class="toc-backref" href="#id39" role="doc-backlink">Shoreline Change Envelope (SCE)</a><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SCE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Shoreline Change Envelope (SCE) value in meters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SCE_highest_unc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>The highest uncertainty value used in the calculation of SCE.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SCE_trend</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Trends (stable, erosion, or accretion) based on SCE and uncertainty value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SCE_closest_year</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Shoreline year closest to the baseline.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SCE_farthest_year</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">integer</span></code></p></td>
+<td><p>Shoreline year farthest from the baseline.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id7">
+<h4><a class="toc-backref" href="#id40" role="doc-backlink">Net Shoreline Movement (NSM)</a><a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">NSM</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Net Shoreline Movement (NSM) value in meters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NSM_highest_unc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>The highest uncertainty value used in the calculation of NSM.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">NSM_trend</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Trends (stable, erosion, or accretion) based on NSM and uncertainty value.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id8">
+<h4><a class="toc-backref" href="#id41" role="doc-backlink">End-Point Rate (EPR)</a><a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EPR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>End-Point Rate (EPR) value in meters/year.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">EPR_unc</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Uncertainty of End-Point Rate (EPR) value in meters/year.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EPR_trend</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></td>
+<td><p>Trends (stable, erosion, or accretion) based on EPR and uncertainty value.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id9">
+<h4><a class="toc-backref" href="#id42" role="doc-backlink">Linear Regression Rate (LRR)</a><a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LRR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Linear Regression Rate (LRR) value in meters/year.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LR2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>R-Squared of Linear Regression (LR2) value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">LSE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Standard Error of Linear Regression (LSE) value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">LCI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Confidence Interval of Linear Regression (LCI) value.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id10">
+<h4><a class="toc-backref" href="#id43" role="doc-backlink">Weighted Linear Regression (WLR)</a><a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field name</p></th>
+<th class="head"><p>Data type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WLR</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Weighted Linear Regression Rate (WLR) value in meters/year.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WR2</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>R-Squared of Weighted Linear Regression (WR2) value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WSE</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Standard Error of Weighted Linear Regression (WSE) value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">WCI</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">double</span></code></p></td>
+<td><p>Confidence Interval of Weighted Linear Regression (WCI) value.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="transects.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tab: Transects</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="area_change.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tab: Area Change (Beta)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transects-layer">Transects layer</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#clip-transects">Clip transects</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transect-shoreline-intersections">Transect-shoreline intersections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-change-statistics">Shoreline change statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#shoreline-change-envelope-sce">Shoreline Change Envelope (SCE)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#net-shoreline-movement-nsm">Net Shoreline Movement (NSM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end-point-rate-epr">End-Point Rate (EPR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-regression-rate-lrr">Linear Regression Rate (LRR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#weighted-linear-regression-wlr">Weighted Linear Regression (WLR)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supplementary-statistics">Supplementary Statistics</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#uncertainty-of-end-point-rate-epr-unc">Uncertainty of End-Point Rate (EPR_unc)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#r-squared-of-linear-regression-lr2-or-wr2">R-Squared of Linear Regression (LR2 or WR2)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-error-of-estimate-of-linear-regression-lse-or-wse">Standard Error of Estimate of Linear Regression (LSE or WSE)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confidence-interval-of-linear-regression-lci-or-wci">Confidence Interval of Linear Regression (LCI or WCI)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pairwise-comparison-of-shorelines">Pairwise comparison of shorelines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-parameters">Additional parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-layer-output">Vector layer output</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layers">Layers</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes">Attributes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Shoreline Change Envelope (SCE)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Net Shoreline Movement (NSM)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">End-Point Rate (EPR)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Linear Regression Rate (LRR)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Weighted Linear Regression (WLR)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/qscat/qscat/edit/master/docs/source/manual/tabs/shoreline_change.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/manual/tabs/shoreline_change.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024, QSCAT.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 6.2.1.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+  </body>
+</html>
