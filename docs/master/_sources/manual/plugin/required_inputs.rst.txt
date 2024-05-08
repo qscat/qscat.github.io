@@ -41,12 +41,12 @@ Attribute fields and values
 After merging, each feature in the shoreline layer should contain the necessary information for each shoreline, including the shoreline date and uncertainty. The table below illustrates the required attribute table for the shoreline layer and the format of the attribute values:
 
 
-=========================== ============ =========== ===========
-Field                       Name         Data Type   Format
-=========================== ============ =========== ===========
-``QSCAT`` date field        ``any_name`` ``String``  ``mm/yyyy``
-``QSCAT`` uncertainty field ``any_name`` ``Decimal`` ``x.xx``
-=========================== ============ =========== ===========
+======================= ============ =========== ===========
+Field                   Name         Data Type   Format
+======================= ============ =========== ===========
+QSCAT date field        ``any_name`` ``String``  ``mm/yyyy``
+QSCAT uncertainty field ``any_name`` ``Decimal`` ``x.xx``
+======================= ============ =========== ===========
 
 .. note:: **Attribute fields and values**
     
