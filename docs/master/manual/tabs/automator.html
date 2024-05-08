@@ -459,15 +459,6 @@ document.write(`
     </div>
   
   
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item"><p class="last-updated">
-  Last updated on May 08, 2024.
-  <br/>
-</p></div>
-      
-    </div>
-  
 </div>
 </div>
               
@@ -533,7 +524,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
-<p>Without the automator, the <code class="docutils literal notranslate"><span class="pre">date</span></code> and <code class="docutils literal notranslate"><span class="pre">uncertainty</span></code> fields can be manually added on the <span class="menuselection">Attribute Table</span> of the shoreline input layer. Basically, this means that you are responsible for selecting the attribute data type. To check full details about shorelines layer, please refer to the <a class="reference internal" href="../plugin/required_inputs.html#preparing-the-shoreline-vectors"><span class="std std-ref">Preparing the shoreline vectors</span></a>.</p>
+<p>Without the automator, the <code class="docutils literal notranslate"><span class="pre">date</span></code> and <code class="docutils literal notranslate"><span class="pre">uncertainty</span></code> fields can be manually added on the <span class="menuselection">Attribute Table</span> of the shoreline input layer. Basically, this means that you are responsible for selecting the attribute data type. To check full details about shorelines layer, please refer to the <a class="reference internal" href="../plugin/required_inputs.html#preparing-the-shoreline-vectors"><span class="std std-ref">Shoreline vectors preparation</span></a>.</p>
 </section>
 </section>
 <section id="baseline">
@@ -587,7 +578,7 @@ document.write(`
 <li><p><strong>Input layer:</strong> vector layer containing the merged shorelines.</p></li>
 <li><p><strong>Buffer distance:</strong> distance in meters to create the buffer around the baseline.</p></li>
 </ol>
-<p>The automator uses processing algorithm <span class="guilabel">Buffer</span> with pre-defined inputs to create the buffer around the merged shorelines layer. The output is then converted to <code class="docutils literal notranslate"><span class="pre">LineString</span></code>. To read more about input baseline layer, please refer to <a class="reference internal" href="../plugin/required_inputs.html#generating-the-baseline-vectors"><span class="std std-ref">Generating the baseline vectors</span></a>.</p>
+<p>The automator uses processing algorithm <span class="guilabel">Buffer</span> with pre-defined inputs to create the buffer around the merged shorelines layer. The output is then converted to <code class="docutils literal notranslate"><span class="pre">LineString</span></code>. To read more about input baseline layer, please refer to <a class="reference internal" href="../plugin/required_inputs.html#generating-the-baseline-vectors"><span class="std std-ref">Baseline vectors creation</span></a>.</p>
 <p>The following are the pre-defined inputs for the <span class="guilabel">Buffer</span> algorithm:</p>
 <table class="table">
 <thead>
@@ -621,6 +612,17 @@ document.write(`
                 </article>
               
               
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><p class="last-updated">
+  Last updated on May 08, 2024.
+  <br/>
+</p></div>
+  
+</div>
+                </footer>
               
               
               

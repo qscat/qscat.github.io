@@ -459,15 +459,6 @@ document.write(`
     </div>
   
   
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item"><p class="last-updated">
-  Last updated on May 08, 2024.
-  <br/>
-</p></div>
-      
-    </div>
-  
 </div>
 </div>
               
@@ -501,7 +492,7 @@ document.write(`
 </figcaption>
 </figure>
 <ol class="arabic simple">
-<li><p><strong>The input layer:</strong> Should be the merged shorelines, created in <a class="reference internal" href="../plugin/required_inputs.html#plugin-required-inputs-shorelines"><span class="std std-ref">Shorelines Layer</span></a>; and</p></li>
+<li><p><strong>The input layer:</strong> Should be the merged shorelines, created in <a class="reference internal" href="../plugin/required_inputs.html#plugin-required-inputs-shorelines"><span class="std std-ref">Shorelines layer</span></a>; and</p></li>
 <li><p><strong>Default data uncertainty:</strong> If the uncertainty value for each shoreline data in the attribute table is set to <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">None</span></code>, the plugin will automatically assign this defined value (defaults to 15 meters). This value represents the uncertainty inherent in the resolution of Landsat images, which are the readily available sources of shoreline data in the country. This default value may underestimate or overestimate the uncertainty inherent in different types of digital images. Thus, it is recommended for you to provide the uncertainty value in the attribute table of the selected shoreline layer.</p></li>
 </ol>
 <p>For the input layer merged shorelines, the uncertainty value should be based on the map or digital image with the lowest resolution. Hence, QSCAT automatically selects the highest or maximum uncertainty value in the attribute table of the merged shorelines.</p>
@@ -522,6 +513,17 @@ document.write(`
                 </article>
               
               
+              
+                <footer class="bd-footer-article">
+                  <div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><p class="last-updated">
+  Last updated on May 08, 2024.
+  <br/>
+</p></div>
+  
+</div>
+                </footer>
               
               
               
