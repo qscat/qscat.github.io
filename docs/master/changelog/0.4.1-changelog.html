@@ -8,8 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-05-04T17:21:48+08:00" />
-    <title>Changelog &#8212; QSCAT</title>
+    <title>QSCAT 0.4.1 Changelog - 2024-07-18 &#8212; QSCAT</title>
   
   
   
@@ -42,16 +41,13 @@
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="../_static/design-tabs.js?v=36754332"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'changelog/index';</script>
-    <link rel="canonical" href="https://qscat.github.io/docs/latest/changelog/index.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'changelog/0.4.1-changelog';</script>
+    <link rel="canonical" href="https://qscat.github.io/docs/latest/changelog/0.4.1-changelog.html" />
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="QSCAT 0.4.1 Changelog - 2024-07-18" href="0.4.1-changelog.html" />
-    <link rel="prev" title="References" href="../manual/others/references.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="May 04, 2024"/>
   </head>
   
   
@@ -154,8 +150,8 @@
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
                         Changelog
                       </a>
                     </li>
@@ -292,8 +288,8 @@ document.write(`
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="#">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="index.html">
                         Changelog
                       </a>
                     </li>
@@ -381,20 +377,6 @@ document.write(`
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
-        <div class="sidebar-primary-item">
-<nav class="bd-docs-nav bd-links"
-     aria-label="Section Navigation">
-  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="0.4.1-changelog.html">0.4.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.4.0-changelog.html">0.4.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.3.1-changelog.html">0.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.3.0-changelog.html">0.3.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.2.0-changelog.html">0.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.1.0-changelog.html">0.1.0</a></li>
-</ul>
-</div>
-</nav></div>
     </div>
   
   
@@ -429,7 +411,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">Changelog</li>
+    <li class="breadcrumb-item active" aria-current="page">QSCAT 0.4.1...</li>
   </ul>
 </nav>
 </div>
@@ -446,20 +428,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">#</a></h1>
-<p>The format is based on <a class="reference external" href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
-and this project adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="0.4.1-changelog.html">0.4.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.4.0-changelog.html">0.4.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.3.1-changelog.html">0.3.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.3.0-changelog.html">0.3.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.2.0-changelog.html">0.2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="0.1.0-changelog.html">0.1.0</a></li>
+  <section id="qscat-0-4-1-changelog-2024-07-18">
+<h1>QSCAT 0.4.1 Changelog - 2024-07-18<a class="headerlink" href="#qscat-0-4-1-changelog-2024-07-18" title="Permalink to this heading">#</a></h1>
+<section id="fixed">
+<h2>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><cite>Forecasting Tab</cite>: Fix issue on forecasting generating weird uncertainty points when date value of month is not 01.</p></li>
+<li><p>Fix proper end time logging of shoreline change and forecasting.</p></li>
+<li><p>Minor bug fixes.</p></li>
 </ul>
-</div>
+</section>
+<section id="added">
+<h2>Added<a class="headerlink" href="#added" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><cite>Visualization Tab</cite>: Add option to select column, and input uncertainty value to support layers generated outside QSCAT.</p></li>
+<li><p><cite>Baseline Tab</cite>, <cite>Automator Tab</cite>: Add smoothing distance field.</p></li>
+<li><p><cite>Shoreline Change Tab</cite>, <cite>Area Change Tab</cite>, <cite>Forecasting Tab</cite>, <cite>Visualization Tab</cite>, <cite>Summary Reports Tab</cite>: Add input saving.</p></li>
+<li><p><cite>Help Tab</cite>: Add useful links.</p></li>
+<li><p><cite>Shorelines Tab</cite>: Add selected shorelines layer validation when changing layer selections.</p></li>
+</ul>
+</section>
+<section id="changed">
+<h2>Changed<a class="headerlink" href="#changed" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><cite>Shoreline Change Tab</cite>: Make newest and oldest date selection automatic; no need to button to update.</p></li>
+<li><p>Major code reformatting and refactor.</p></li>
+<li><p><cite>User Manual</cite>: Update figures and texts.</p></li>
+</ul>
+</section>
 </section>
 
 
@@ -467,40 +463,11 @@ and this project adheres to <a class="reference external" href="https://semver.o
               
               
               
-                <footer class="bd-footer-article">
-                  <div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><p class="last-updated">
-  Last updated on May 04, 2024.
-  <br/>
-</p></div>
-  
-</div>
-                </footer>
-              
               
               
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="../manual/others/references.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">References</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="0.4.1-changelog.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">QSCAT 0.4.1 Changelog - 2024-07-18</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -512,28 +479,16 @@ and this project adheres to <a class="reference external" href="https://semver.o
 
   <div class="sidebar-secondary-item">
 
-  
-  <div class="tocsection editthispage">
-    <a href="https://github.com/qscat/qscat/edit/master/docs/source/changelog/index.rst">
-      <i class="fa-solid fa-pencil"></i>
-      
-      
-        
-          Edit on GitHub
-        
-      
-    </a>
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../_sources/changelog/index.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fixed">Fixed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#added">Added</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changed">Changed</a></li>
+</ul>
+  </nav></div>
 
 </div></div>
               

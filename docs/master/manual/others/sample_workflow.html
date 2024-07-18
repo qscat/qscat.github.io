@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta property="article:modified_time" content="2024-05-08T21:56:07+08:00" />
+    <meta property="article:modified_time" content="2024-07-18T15:30:19+08:00" />
     <title>Sample Workflow &#8212; QSCAT</title>
   
   
@@ -51,7 +51,7 @@
     <link rel="prev" title="Tab: About" href="../tabs/about.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="May 08, 2024"/>
+    <meta name="docbuild:last-update" content="Jul 18, 2024"/>
   </head>
   
   
@@ -473,32 +473,32 @@ document.write(`
 <span id="others-sample-workflow"></span><h1>Sample Workflow<a class="headerlink" href="#sample-workflow" title="Permalink to this heading">#</a></h1>
 <nav class="contents local" id="contents">
 <ul class="simple">
-<li><p><a class="reference internal" href="#preparing-the-shoreline-vectors" id="id53">Preparing the shoreline vectors</a></p></li>
-<li><p><a class="reference internal" href="#generating-the-baseline-vectors" id="id54">Generating the baseline vectors</a></p>
+<li><p><a class="reference internal" href="#preparing-the-shoreline-vectors" id="id54">Preparing the shoreline vectors</a></p></li>
+<li><p><a class="reference internal" href="#generating-the-baseline-vectors" id="id55">Generating the baseline vectors</a></p>
 <ul>
-<li><p><a class="reference internal" href="#merging-the-shoreline-vectors" id="id55">Merging the shoreline vectors</a></p></li>
-<li><p><a class="reference internal" href="#creating-a-buffer-using-qscat" id="id56">Creating a buffer using QSCAT</a></p></li>
-<li><p><a class="reference internal" href="#converting-the-buffer-to-baseline-vector" id="id57">Converting the buffer to baseline vector</a></p></li>
+<li><p><a class="reference internal" href="#merging-the-shoreline-vectors" id="id56">Merging the shoreline vectors</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-buffer-using-qscat" id="id57">Creating a buffer using QSCAT</a></p></li>
+<li><p><a class="reference internal" href="#converting-the-buffer-to-baseline-vector" id="id58">Converting the buffer to baseline vector</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuring-the-shoreline-and-baseline-layer-attributes" id="id58">Configuring the shoreline and baseline layer attributes</a></p>
+<li><p><a class="reference internal" href="#configuring-the-shoreline-and-baseline-layer-attributes" id="id59">Configuring the shoreline and baseline layer attributes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#shorelines" id="id59">Shorelines</a></p></li>
-<li><p><a class="reference internal" href="#baseline" id="id60">Baseline</a></p></li>
+<li><p><a class="reference internal" href="#shorelines" id="id60">Shorelines</a></p></li>
+<li><p><a class="reference internal" href="#baseline" id="id61">Baseline</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#configuring-the-selections-of-layer-and-fields" id="id61">Configuring the selections of layer and fields</a></p></li>
-<li><p><a class="reference internal" href="#casting-of-transects" id="id62">Casting of transects</a></p></li>
-<li><p><a class="reference internal" href="#computing-the-shoreline-change" id="id63">Computing the shoreline change</a></p></li>
-<li><p><a class="reference internal" href="#running-optional-features" id="id64">Running optional features</a></p>
+<li><p><a class="reference internal" href="#configuring-the-selections-of-layer-and-fields" id="id62">Configuring the selections of layer and fields</a></p></li>
+<li><p><a class="reference internal" href="#casting-of-transects" id="id63">Casting of transects</a></p></li>
+<li><p><a class="reference internal" href="#computing-the-shoreline-change" id="id64">Computing the shoreline change</a></p></li>
+<li><p><a class="reference internal" href="#running-optional-features" id="id65">Running optional features</a></p>
 <ul>
-<li><p><a class="reference internal" href="#computing-the-area-change" id="id65">Computing the area change</a></p>
+<li><p><a class="reference internal" href="#computing-the-area-change" id="id66">Computing the area change</a></p>
 <ul>
-<li><p><a class="reference internal" href="#creating-the-polygon-using-qgis" id="id66">Creating the polygon using QGIS</a></p></li>
+<li><p><a class="reference internal" href="#creating-the-polygon-using-qgis" id="id67">Creating the polygon using QGIS</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#running-the-forecasting" id="id67">Running the forecasting</a></p></li>
-<li><p><a class="reference internal" href="#visualizing-the-statistics-transects" id="id68">Visualizing the statistics transects</a></p></li>
+<li><p><a class="reference internal" href="#running-the-forecasting" id="id68">Running the forecasting</a></p></li>
+<li><p><a class="reference internal" href="#visualizing-the-statistics-transects" id="id69">Visualizing the statistics transects</a></p></li>
 </ul>
 </li>
 </ul>
@@ -512,7 +512,7 @@ document.write(`
 </ol>
 </div></blockquote>
 <section id="preparing-the-shoreline-vectors">
-<h2><a class="toc-backref" href="#id53" role="doc-backlink">Preparing the shoreline vectors</a><a class="headerlink" href="#preparing-the-shoreline-vectors" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id54" role="doc-backlink">Preparing the shoreline vectors</a><a class="headerlink" href="#preparing-the-shoreline-vectors" title="Permalink to this heading">#</a></h2>
 <p>The tracing of shoreline vectors are out of scope in this guide. However, the shoreline vectors are already provided in the sample data. The shoreline vectors are saved as separate shapefile layers for each year. The shoreline vectors are saved as follows:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -525,7 +525,7 @@ document.write(`
 <p>You can download the sample data from the following link: &lt;insert link&gt;</p>
 </section>
 <section id="generating-the-baseline-vectors">
-<h2><a class="toc-backref" href="#id54" role="doc-backlink">Generating the baseline vectors</a><a class="headerlink" href="#generating-the-baseline-vectors" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id55" role="doc-backlink">Generating the baseline vectors</a><a class="headerlink" href="#generating-the-baseline-vectors" title="Permalink to this heading">#</a></h2>
 <p>One of the required inputs for the QSCAT is the baseline vectors. Baseline vectors can be created using the following different strategies:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -536,7 +536,7 @@ document.write(`
 </div></blockquote>
 <p>In this guide, we will choose the first strategy, which is creating a buffer of the merged shorelines layer. Then, we will choose the part of the buffer that best represents the baseline.</p>
 <section id="merging-the-shoreline-vectors">
-<span id="others-sample-workflow-mergin-shorelines"></span><h3><a class="toc-backref" href="#id55" role="doc-backlink">Merging the shoreline vectors</a><a class="headerlink" href="#merging-the-shoreline-vectors" title="Permalink to this heading">#</a></h3>
+<span id="others-sample-workflow-mergin-shorelines"></span><h3><a class="toc-backref" href="#id56" role="doc-backlink">Merging the shoreline vectors</a><a class="headerlink" href="#merging-the-shoreline-vectors" title="Permalink to this heading">#</a></h3>
 <p>Merging the shoreline step is optional. We only apply this if our digitized shorelines are saved as <strong>separate</strong> shapefile layers. However, in this guide, the Agoo, La Union shorelines are shared as separate shapefile layers. Thus, we will demonstrate here on how to merge these layers.</p>
 <p>However, regardless on what strategy you choose for generating the baseline vectors, the QSCAT requires the shoreline layers to be merged into a single layer. Also, if you choose the first strategy, you should first merge the shoreline layers so that we can create a buffer of all shorelines.</p>
 <ol class="arabic">
@@ -615,7 +615,7 @@ document.write(`
 </ol>
 </section>
 <section id="creating-a-buffer-using-qscat">
-<h3><a class="toc-backref" href="#id56" role="doc-backlink">Creating a buffer using QSCAT</a><a class="headerlink" href="#creating-a-buffer-using-qscat" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id57" role="doc-backlink">Creating a buffer using QSCAT</a><a class="headerlink" href="#creating-a-buffer-using-qscat" title="Permalink to this heading">#</a></h3>
 <p>Here, we can start using the QSCAT plugin. The QSCAT plugin has a feature that automates the creation of the <a class="reference internal" href="../tabs/automator.html#tab-automator-baseline-buffer"><span class="std std-ref">Baseline buffer</span></a>.</p>
 <ol class="arabic">
 <li><p>Open QSCAT if not yet opened. The QSCAT plugin can be open by clicking the <a class="reference internal" href="../../_images/qscat.png"><img alt="qscat" src="../../_images/qscat.png" style="width: 1.3em;" /></a> icon at the top toolbar area near the <a class="reference internal" href="../../_images/python.png"><img alt="python" src="../../_images/python.png" style="width: 1.3em;" /></a> <span class="guilabel">Python Console</span> icon.</p></li>
@@ -642,7 +642,7 @@ document.write(`
 </ol>
 </section>
 <section id="converting-the-buffer-to-baseline-vector">
-<span id="others-sample-workflow-converting-buffer-to-baseline"></span><h3><a class="toc-backref" href="#id57" role="doc-backlink">Converting the buffer to baseline vector</a><a class="headerlink" href="#converting-the-buffer-to-baseline-vector" title="Permalink to this heading">#</a></h3>
+<span id="others-sample-workflow-converting-buffer-to-baseline"></span><h3><a class="toc-backref" href="#id58" role="doc-backlink">Converting the buffer to baseline vector</a><a class="headerlink" href="#converting-the-buffer-to-baseline-vector" title="Permalink to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>First, enable the <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Advanced Digitizing Toolbar</span> (if not yet enabled) by going to <span class="menuselection">View ‣ Toolbars ‣ Advanced Digitizing Toolbar</span>.</p>
 <figure class="align-center" id="id11">
@@ -793,12 +793,12 @@ document.write(`
 </section>
 </section>
 <section id="configuring-the-shoreline-and-baseline-layer-attributes">
-<h2><a class="toc-backref" href="#id58" role="doc-backlink">Configuring the shoreline and baseline layer attributes</a><a class="headerlink" href="#configuring-the-shoreline-and-baseline-layer-attributes" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id59" role="doc-backlink">Configuring the shoreline and baseline layer attributes</a><a class="headerlink" href="#configuring-the-shoreline-and-baseline-layer-attributes" title="Permalink to this heading">#</a></h2>
 <section id="shorelines">
-<h3><a class="toc-backref" href="#id59" role="doc-backlink">Shorelines</a><a class="headerlink" href="#shorelines" title="Permalink to this heading">#</a></h3>
-<p>Next, we need to add details of each shoreline such as its date and its uncertainty value of the images. We can use <span class="guilabel">Shoreline Fields Automator</span> to add the required fields for these.</p>
+<h3><a class="toc-backref" href="#id60" role="doc-backlink">Shorelines</a><a class="headerlink" href="#shorelines" title="Permalink to this heading">#</a></h3>
+<p>Next, we need to add details of each shoreline such as its date and its uncertainty value of the images. We can use <span class="guilabel">Shoreline fields automator</span> to add the required fields for these.</p>
 <ol class="arabic">
-<li><p>Navigate to <span class="guilabel">Automator Tab</span>. Then, in the <span class="guilabel">Fields - Shoreline</span>, select the merged shoreline layer from <span class="guilabel">Shoreline layer</span>. Make sure <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a><span class="guilabel">Date field name</span> and <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Uncertainty field name</span> is both checked. Type the appropriate date field name and uncertainty field name or leave as is. In this example, we choose <code class="docutils literal notranslate"><span class="pre">qs_date</span></code> and <code class="docutils literal notranslate"><span class="pre">qs_unc</span></code> as the field names. Click <span class="guilabel">Add Fields</span>.</p>
+<li><p>Navigate to <span class="guilabel">Automator Tab</span>. Then, in the <span class="guilabel">Shorelines fields</span>, select the merged shoreline layer from <span class="guilabel">Shorelines layer</span>. Make sure <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a><span class="guilabel">Date field name</span> and <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Uncertainty field name</span> is both checked. Type the appropriate date field name and uncertainty field name or leave as is. In this example, we choose <code class="docutils literal notranslate"><span class="pre">qs_date</span></code> and <code class="docutils literal notranslate"><span class="pre">qs_unc</span></code> as the field names. Click <span class="guilabel">Add Fields</span>.</p>
 <figure class="align-center" id="id25">
 <img alt="Automating adding of shoreline fields using Shoreline Fields Automator" src="../../_images/automating-shoreline-fields.png" />
 <figcaption>
@@ -874,12 +874,12 @@ document.write(`
 </ol>
 </section>
 <section id="baseline">
-<h3><a class="toc-backref" href="#id60" role="doc-backlink">Baseline</a><a class="headerlink" href="#baseline" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id61" role="doc-backlink">Baseline</a><a class="headerlink" href="#baseline" title="Permalink to this heading">#</a></h3>
 <p>Baseline also optionally includes fields such as placement, transect length, and orientation. However for this sample data, we will not add any fields because it is only applicable for multi baseline. For more information, refer to <a class="reference internal" href="../tabs/automator.html#tab-automator-baseline-fields"><span class="std std-ref">Baseline fields</span></a>.</p>
 </section>
 </section>
 <section id="configuring-the-selections-of-layer-and-fields">
-<h2><a class="toc-backref" href="#id61" role="doc-backlink">Configuring the selections of layer and fields</a><a class="headerlink" href="#configuring-the-selections-of-layer-and-fields" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id62" role="doc-backlink">Configuring the selections of layer and fields</a><a class="headerlink" href="#configuring-the-selections-of-layer-and-fields" title="Permalink to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>For shorelines, go to <span class="guilabel">Shorelines Tab</span>.</p>
 <p>In <span class="guilabel">Layer</span> section, select the merged shoreline layer as the <span class="guilabel">Input layer</span>. Leave <span class="guilabel">Default data uncertainty</span> as is; this value is used when no uncertainty value is provided in a shoreline uncertainty field (<a class="reference internal" href="../tabs/shorelines.html#shorelines-parameters"><span class="std std-ref">Layer</span></a>).</p>
@@ -911,11 +911,11 @@ document.write(`
 </ol>
 </section>
 <section id="casting-of-transects">
-<h2><a class="toc-backref" href="#id62" role="doc-backlink">Casting of transects</a><a class="headerlink" href="#casting-of-transects" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id63" role="doc-backlink">Casting of transects</a><a class="headerlink" href="#casting-of-transects" title="Permalink to this heading">#</a></h2>
 <p>We can now start the process of running shoreline change analysis. The first step is to cast transects. The transects are lines that are perpendicular to the baseline. The transects are used to measure the shoreline change statistics.</p>
 <ol class="arabic">
 <li><p>Go to <span class="guilabel">Transects Tab</span>.</p>
-<p>In <span class="guilabel">Layer</span> section, select a name for the transect layer in <span class="guilabel">Layer output name</span>. In this example, we leave <code class="docutils literal notranslate"><span class="pre">transects</span></code> as is (see <a class="reference internal" href="../tabs/transects.html#tab-transects-vector-layer-output-name"><span class="std std-ref">Vector layer output</span></a> how is the output name used).</p>
+<p>In <span class="guilabel">Layer</span> section, select a name for the transect layer in <span class="guilabel">Layer name</span>. In this example, we leave <code class="docutils literal notranslate"><span class="pre">transects</span></code> as is (see <a class="reference internal" href="../tabs/transects.html#tab-transects-vector-layer-output-name"><span class="std std-ref">Vector layer output</span></a> how is the output name used).</p>
 <p>In <span class="guilabel">Count</span> section, select how would you want the number of transects to be determined. In this example, we choose <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">By transect spacing</span> and leave <code class="docutils literal notranslate"><span class="pre">50</span></code> meters as is` (see <a class="reference internal" href="../tabs/transects.html#tab-transects-count"><span class="std std-ref">Count</span></a>).</p>
 <p>In <span class="guilabel">Parameters</span> section, leave <span class="guilabel">Transect length</span> and <span class="guilabel">Smoothing distance</span> as is (see <a class="reference internal" href="../tabs/transects.html#tab-transects-parameters"><span class="std std-ref">Parameters</span></a>).</p>
 <p>Click <span class="guilabel">Cast Transect</span> to start the process of casting transects. The transects will be created and displayed in the map canvas. The transects will be saved as a temporary layer. You can optionally <span class="guilabel">Save</span> the selections such that it will be retain when you close QSCAT or QGIS.</p>
@@ -950,14 +950,14 @@ document.write(`
 </ol>
 </section>
 <section id="computing-the-shoreline-change">
-<h2><a class="toc-backref" href="#id63" role="doc-backlink">Computing the shoreline change</a><a class="headerlink" href="#computing-the-shoreline-change" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id64" role="doc-backlink">Computing the shoreline change</a><a class="headerlink" href="#computing-the-shoreline-change" title="Permalink to this heading">#</a></h2>
 <ol class="arabic">
 <li><p>Go to <span class="guilabel">Shoreline Change Tab</span>.</p>
-<p>In <span class="guilabel">General</span> section, select the created transect layer (note that after every cast the transects layer will be automatically selected here). You can optionally <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Clip transects</span> if you want, this is only for visualization purposes and does not affect statistics. Choose where you want the summary reports to be saved in <span class="guilabel">Summary reports location</span> (see <a class="reference internal" href="../tabs/summary_reports.html#tab-summary-reports"><span class="std std-ref">Tab: Summary Reports</span></a>).</p>
-<p>In <span class="guilabel">Transect-Shoreline Intersections</span>, leave <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">Distance</span> and <span class="guilabel">Farthest</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-tsi"><span class="std std-ref">Transect-shoreline intersections</span></a>).</p>
-<p>In <span class="guilabel">Shoreline Change Statistics</span>, select statistics you want to calculate, select all via <span class="guilabel">Select / Deselect All</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-scs"><span class="std std-ref">Shoreline change statistics</span></a>).</p>
-<p>In <span class="guilabel">Pairwise Comparison Shorelines</span>, always click <span class="guilabel">Update</span> when selections are empty in <span class="guilabel">Newest date</span> and <span class="guilabel">Oldest date</span>. The <span class="guilabel">Update</span> button is also used when you changed the values of date field in shorelines layer then you want to update the selection of dates. Make sure to select <code class="docutils literal notranslate"><span class="pre">04/2022</span></code> in <span class="guilabel">Newest date</span> and <code class="docutils literal notranslate"><span class="pre">01/1977</span></code> in <span class="guilabel">Oldest date</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-pcs"><span class="std std-ref">Pairwise comparison of shorelines</span></a>).</p>
-<p>In <span class="guilabel">Additional Parameters</span>, leave <span class="guilabel">Confidence interval (%)</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-additional-parameters"><span class="std std-ref">Additional parameters</span></a>).</p>
+<p>In <span class="guilabel">General</span> section, select the created transect layer (note that after every cast the transects layer will be automatically selected here). You can optionally <a class="reference internal" href="../../_images/checkbox.png"><img alt="checkbox" src="../../_images/checkbox.png" style="width: 1.0em;" /></a> <span class="guilabel">Clip transects</span> if you want, this is only for visualization purposes and does not affect statistics. For summary reports location (see <a class="reference internal" href="../tabs/summary_reports.html#tab-summary-reports"><span class="std std-ref">Tab: Summary Reports</span></a>).</p>
+<p>In <span class="guilabel">Transect-shoreline intersections</span>, leave <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">Distance</span> and <span class="guilabel">Farthest</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-tsi"><span class="std std-ref">Transect-shoreline intersections</span></a>).</p>
+<p>In <span class="guilabel">Shoreline change statistics</span>, select statistics you want to calculate, select all via <span class="guilabel">Select / Deselect All</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-scs"><span class="std std-ref">Shoreline change statistics</span></a>).</p>
+<p>In <span class="guilabel">NSM and EPR dates</span>, make sure to select <code class="docutils literal notranslate"><span class="pre">04/2022</span></code> in <span class="guilabel">Newest date</span> and <code class="docutils literal notranslate"><span class="pre">01/1977</span></code> in <span class="guilabel">Oldest date</span> (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-pcs"><span class="std std-ref">Pairwise comparison of shorelines</span></a>).</p>
+<p>In <span class="guilabel">Additional parameters</span>, leave <span class="guilabel">Confidence interval (%)</span> as is (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-additional-parameters"><span class="std std-ref">Additional parameters</span></a>).</p>
 <p>Click <span class="guilabel">Compute Shoreline Change</span> to start the process of computing shoreline change. The shoreline change statistics will be calculated and the transects will be displayed in the map canvas. The statistics will be saved as a temporary layer. You can optionally <span class="guilabel">Save</span> the selections such that it will be retain when you close QSCAT or QGIS (see <a class="reference internal" href="../tabs/shoreline_change.html#tab-shoreline-change-vector-layer-output-name"><span class="std std-ref">Vector layer output</span></a>) for layer outputs.</p>
 <figure class="align-center" id="id35">
 <img alt="Computing shoreline change using Shoreline Change Tab" class="img-border" src="../../_images/computing-shoreline-change.png" />
@@ -999,12 +999,12 @@ document.write(`
 </ol>
 </section>
 <section id="running-optional-features">
-<h2><a class="toc-backref" href="#id64" role="doc-backlink">Running optional features</a><a class="headerlink" href="#running-optional-features" title="Permalink to this heading">#</a></h2>
+<h2><a class="toc-backref" href="#id65" role="doc-backlink">Running optional features</a><a class="headerlink" href="#running-optional-features" title="Permalink to this heading">#</a></h2>
 <section id="computing-the-area-change">
-<h3><a class="toc-backref" href="#id65" role="doc-backlink">Computing the area change</a><a class="headerlink" href="#computing-the-area-change" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id66" role="doc-backlink">Computing the area change</a><a class="headerlink" href="#computing-the-area-change" title="Permalink to this heading">#</a></h3>
 <p>This feature requires a polygon area to encompass which would you like to get the area change. Usually, we designed this for a specific area of interest like municipality or barangay boundaries. If you want to get the area change on whole area at once then you can draw a polygon that encompasses the whole area. For this sample data, we will get the area change on the whole area.</p>
 <section id="creating-the-polygon-using-qgis">
-<h4><a class="toc-backref" href="#id66" role="doc-backlink">Creating the polygon using QGIS</a><a class="headerlink" href="#creating-the-polygon-using-qgis" title="Permalink to this heading">#</a></h4>
+<h4><a class="toc-backref" href="#id67" role="doc-backlink">Creating the polygon using QGIS</a><a class="headerlink" href="#creating-the-polygon-using-qgis" title="Permalink to this heading">#</a></h4>
 <ol class="arabic">
 <li><p>In the top part of QGIS, click <a class="reference internal" href="../../_images/action-new-vector-layer.png"><img alt="newVectorLayer" src="../../_images/action-new-vector-layer.png" style="width: 1.5em;" /></a> <span class="guilabel">New Shapefile Layer</span>.</p>
 <figure class="align-center" id="id39">
@@ -1089,7 +1089,7 @@ document.write(`
 </figure>
 </li>
 <li><p>Go to <span class="guilabel">Area Change Tab</span>.</p>
-<p>In <span class="guilabel">General</span> section, select the created polygon layer as the <span class="guilabel">Polygon boundary</span>, and in <span class="guilabel">Stat</span>, select the NSM layer. Only NSM and EPR statistics are available for area change for now (see <a class="reference internal" href="../tabs/area_change.html#tab-area-change"><span class="std std-ref">Tab: Area Change</span></a>).</p>
+<p>In <span class="guilabel">General</span> section, select the created polygon layer as the <span class="guilabel">Polygon layer</span>, and in <span class="guilabel">Shoreline change statistic layer</span>, select the NSM layer. Only NSM and EPR statistics are available for area change for now (see <a class="reference internal" href="../tabs/area_change.html#tab-area-change"><span class="std std-ref">Tab: Area Change</span></a>).</p>
 <figure class="align-center" id="id47">
 <img alt="Computing area change in Area Change Tab" src="../../_images/computing-area-change.png" />
 <figcaption>
@@ -1113,15 +1113,25 @@ document.write(`
 </section>
 </section>
 <section id="running-the-forecasting">
-<h3><a class="toc-backref" href="#id67" role="doc-backlink">Running the forecasting</a><a class="headerlink" href="#running-the-forecasting" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id68" role="doc-backlink">Running the forecasting</a><a class="headerlink" href="#running-the-forecasting" title="Permalink to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Go to <span class="guilabel">Forecasting Tab</span></p>
-<p>In <span class="guilabel">Algorithm</span>, the current available algorithm is <span class="guilabel">Kalman Filter</span> (see <a class="reference internal" href="../tabs/forecasting.html#tab-forecasting-algorithm"><span class="std std-ref">Layer</span></a>).</p>
+<p>In <span class="guilabel">Layer</span>, select the transects layer as the <span class="guilabel">Transects layer</span>.</p>
+<p>In <span class="guilabel">Algorithm</span>, the current available algorithm is <span class="guilabel">Kalman Filter</span> (see <a class="reference internal" href="../tabs/forecasting.html#tab-forecasting-algorithm"><span class="std std-ref">Algorithm</span></a>).</p>
 <p>In <span class="guilabel">Time Period</span>, select <a class="reference internal" href="../../_images/radiobutton.png"><img alt="radiobutton" src="../../_images/radiobutton.png" style="width: 1.0em;" /></a> <span class="guilabel">10 years</span> (see <a class="reference internal" href="../tabs/forecasting.html#tab-forecasting-time-period"><span class="std std-ref">Time period</span></a>) and click <span class="guilabel">Forecast</span>.</p>
 <figure class="align-center" id="id49">
+<img alt="Forecasting in Forecasting Tab" src="../../_images/forecasting.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 91 </span><span class="caption-text">Forecasting in Forecasting Tab</span><a class="headerlink" href="#id49" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id50">
 <img alt="Example forecasting in Forecasting Tab" class="img-border" src="../../_images/example-forecasting.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 91 </span><span class="caption-text">Example forecasting in Forecasting Tab</span><a class="headerlink" href="#id49" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Example forecasting in Forecasting Tab</span><a class="headerlink" href="#id50" title="Permalink to this image">#</a></p>
 <div class="legend">
 <p><br /></p>
 </div>
@@ -1131,33 +1141,33 @@ document.write(`
 </ol>
 </section>
 <section id="visualizing-the-statistics-transects">
-<h3><a class="toc-backref" href="#id68" role="doc-backlink">Visualizing the statistics transects</a><a class="headerlink" href="#visualizing-the-statistics-transects" title="Permalink to this heading">#</a></h3>
+<h3><a class="toc-backref" href="#id69" role="doc-backlink">Visualizing the statistics transects</a><a class="headerlink" href="#visualizing-the-statistics-transects" title="Permalink to this heading">#</a></h3>
 <ol class="arabic">
 <li><p>Go to <span class="guilabel">Visualization Tab</span></p>
-<p>In <span class="guilabel">Layer</span>, select a statistic layer to apply visualization. In this example, we choose the NSM statistic layer.</p>
-<p>In <span class="guilabel">Color Ramp</span>, leave the number of <span class="guilabel">Negative classes</span> and <span class="guilabel">Positive classes</span> as is. Select <code class="docutils literal notranslate"><span class="pre">Equal</span> <span class="pre">Interval</span></code> as the <span class="guilabel">Mode</span> and click <span class="guilabel">Visualize</span>.</p>
-<figure class="align-center" id="id50">
+<p>In <span class="guilabel">Layer</span>, select a statistic layer to apply visualization in <span class="guilabel">Shoreline change statistic layer</span>. In this example, we choose the NSM statistic layer. Select the field of NSM layer with the statistic value in <span class="guilabel">Statistic value field</span>, and manually input the value of the uncertainty in <span class="guilabel">Uncertainty value (SCE, NSM, EPR)</span>.</p>
+<p>In <span class="guilabel">Color ramp</span>, select <code class="docutils literal notranslate"><span class="pre">Equal</span> <span class="pre">Interval</span></code> as the <span class="guilabel">Mode</span>.Leave the number of <span class="guilabel">Negative classes</span> and <span class="guilabel">Positive classes</span> as is, and click <span class="guilabel">Visualize</span>.</p>
+<figure class="align-center" id="id51">
 <img alt="Visualizing statistics in Visualization Tab" src="../../_images/visualizing-nsm-statistic.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 92 </span><span class="caption-text">Visualizing statistics in Visualization Tab</span><a class="headerlink" href="#id50" title="Permalink to this image">#</a></p>
-<div class="legend">
-<p><br /></p>
-</div>
-</figcaption>
-</figure>
-<figure class="align-center" id="id51">
-<img alt="Visualized NSM statistic" src="../../_images/visualized-nsm-statistic.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Visualized NSM statistic</span><a class="headerlink" href="#id51" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 93 </span><span class="caption-text">Visualizing statistics in Visualization Tab</span><a class="headerlink" href="#id51" title="Permalink to this image">#</a></p>
 <div class="legend">
 <p><br /></p>
 </div>
 </figcaption>
 </figure>
 <figure class="align-center" id="id52">
+<img alt="Visualized NSM statistic" src="../../_images/visualized-nsm-statistic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Visualized NSM statistic</span><a class="headerlink" href="#id52" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p><br /></p>
+</div>
+</figcaption>
+</figure>
+<figure class="align-center" id="id53">
 <img alt="Visualized NSM statistic color ramp with equal interval range values" class="img-border" src="../../_images/visualized-nsm-statistic-color-ramp-values.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 94 </span><span class="caption-text">Visualized NSM statistic color ramp with equal interval range values</span><a class="headerlink" href="#id52" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 95 </span><span class="caption-text">Visualized NSM statistic color ramp with equal interval range values</span><a class="headerlink" href="#id53" title="Permalink to this image">#</a></p>
 <div class="legend">
 <p><br /></p>
 </div>
@@ -1178,7 +1188,7 @@ document.write(`
                   <div class="footer-article-items footer-article__inner">
   
     <div class="footer-article-item"><p class="last-updated">
-  Last updated on May 08, 2024.
+  Last updated on Jul 18, 2024.
   <br/>
 </p></div>
   
